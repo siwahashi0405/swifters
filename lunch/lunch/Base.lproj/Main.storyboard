@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,11 +22,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="F3d-bR-mWQ">
-                                <frame key="frameInset" minX="16" minY="157" width="343" height="97"/>
+                                <rect key="frame" x="16" y="157" width="343" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arb-gS-cKe">
-                                <frame key="frameInset" minX="57" minY="451" width="260" height="44"/>
+                                <rect key="frame" x="57" y="451" width="260" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_camera.png"/>
                                 <connections>
@@ -31,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVu-og-HEb">
-                                <frame key="frameInset" minX="57" minY="516" width="260" height="44"/>
+                                <rect key="frame" x="57" y="516" width="260" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_history.png"/>
                                 <connections>
@@ -59,11 +62,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-er-How">
-                                <frame key="frameInset" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77u-St-2zu">
-                                <frame key="frameInset" minX="16" minY="28" width="14" height="24"/>
+                                <rect key="frame" x="16" y="28" width="14" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="/images/back_arrow.png"/>
                                 <connections>
@@ -71,17 +74,34 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v20-Yb-HEA">
-                                <frame key="frameInset" minX="57" minY="451" width="260" height="44"/>
+                                <rect key="frame" x="57" y="451" width="260" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_camera.png"/>
                                 <connections>
                                     <action selector="takePicture:" destination="F44-GI-GRu" eventType="touchDown" id="eB2-C5-jqc"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzO-Dn-wKD">
+                                <rect key="frame" x="67" y="106" width="240" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="def-Ie-vSf">
+                                <rect key="frame" x="67" y="106" width="240" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ch2-we-uCO">
+                                <rect key="frame" x="152" y="438" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OVe-rM-qJ9"/>
+                    <connections>
+                        <outlet property="cameraView" destination="def-Ie-vSf" id="Nhw-SW-Smr"/>
+                        <outlet property="spinner" destination="Ch2-we-uCO" id="XJz-uc-wZB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZG-7D-7Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +110,7 @@
         <!--Detail View Controller-->
         <scene sceneID="vBZ-dY-FJT">
             <objects>
-                <viewController id="Xy3-EV-dZW" customClass="DetailViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewControllerStoryboard" id="Xy3-EV-dZW" customClass="DetailViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vju-in-vle"/>
                         <viewControllerLayoutGuide type="bottom" id="kic-uy-8Eg"/>
@@ -100,15 +120,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZuN-FV-Xhl">
-                                <frame key="frameInset" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCT-eE-oNr">
-                                <frame key="frameInset" minX="57" minY="451" width="260" height="44"/>
+                                <rect key="frame" x="57" y="451" width="260" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_again.png"/>
                                 <connections>
-                                    <action selector="takePicture:" destination="F44-GI-GRu" eventType="touchDown" id="mQA-ZF-CJo"/>
+                                    <action selector="back:" destination="Xy3-EV-dZW" eventType="touchDown" id="czH-ZZ-bch"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHO-jZ-mpi">
+                                <rect key="frame" x="16" y="28" width="14" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="/images/back_arrow.png"/>
+                                <connections>
+                                    <action selector="back:" destination="Xy3-EV-dZW" eventType="touchDown" id="qW4-ai-MzO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,11 +160,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_history.png" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-xL-ngz">
-                                    <frame key="frameInset" width="375" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-RM-abw">
-                                    <frame key="frameInset" minX="8" minY="32" width="14" height="24"/>
+                                    <rect key="frame" x="8" y="32" width="14" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="/images/back_arrow.png"/>
                                     <connections>
@@ -151,7 +179,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dPa-JK-Qm6" id="Srz-Ln-PKo">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

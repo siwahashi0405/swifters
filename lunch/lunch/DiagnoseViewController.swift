@@ -13,6 +13,13 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBOutlet weak var cameraView: UIImageView!
     
+    @IBOutlet weak var spinner: UIImageView!
+
+    //override func viewWillAppear() {
+    override func viewWillAppear(_ animated: Bool) {
+        print("DiagnoseViewController")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,16 +60,22 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
         //        print(info[UIImagePickerControllerEditedImage])
         if let image = info[UIImagePickerControllerOriginalImage] {
             print(image)
-            cameraView.image = UIImage.gif(name: "images/load")   // スピナー表示
+            self.cameraView.image = image as? UIImage
+            self.spinner.image = UIImage.gif(name: "images/load")   // スピナー表示
             //            Image2String(image: cameraView.image!)   // Base64に変換
         }
         cameraPicker.dismiss(animated: true, completion: nil)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.spinner.image = UIImage.gif(name: "")   // スピナー非表示
+            print("2秒後")
             // 2秒後に実行したい処理
-            let detailViewController = DetailViewController()
-//            listTableViewController.list = [0 : "聡吾", 1 : "5678", 2 : "メロン"]
+//            let detailViewController = UIStoryboard(name: "DetailViewControllerStoryboard", bundle: nil).instantiateInitialViewController()!
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewControllerStoryboard")
+//            detailViewController.list = [0 : "聡吾", 1 : "5678", 2 : "メロン"]
             self.present(detailViewController, animated: true, completion: nil)
+            print("3秒後")
         }
     }
     
