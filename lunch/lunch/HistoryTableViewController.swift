@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController{
     
-    var list: Dictionary<Int, Any> = [:]
+    var list: Dictionary<Int, Any> = [0 : "聡吾", 1 : "5678", 2 : "メロン"]//[:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,5 +106,8 @@ class HistoryTableViewController: UITableViewController{
      // Pass the selected object to the new view controller.
      }
      */
-    
+
+    @IBAction func back(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

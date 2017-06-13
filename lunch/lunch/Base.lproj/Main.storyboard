@@ -34,6 +34,9 @@
                                 <frame key="frameInset" minX="57" minY="516" width="260" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_history.png"/>
+                                <connections>
+                                    <segue destination="DiV-v1-qg4" kind="presentation" id="dfm-tS-dt4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,36 +120,51 @@
             <point key="canvasLocation" x="1713" y="37"/>
         </scene>
         <!--History Table View Controller-->
-        <scene sceneID="MQN-dF-HE8">
+        <scene sceneID="4hi-Q8-wEt">
             <objects>
-                <viewController id="wpp-Z1-p55" customClass="HistoryTableViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N8G-4f-lNc"/>
-                        <viewControllerLayoutGuide type="bottom" id="pOI-1C-rHm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NWN-Gw-A1u">
+                <tableViewController id="DiV-v1-qg4" customClass="HistoryTableViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="O04-Ir-0JW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_history.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Hj-PW-H2u">
-                                <frame key="frameInset" width="375" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUc-K2-OVH">
-                                <frame key="frameInset" minX="16" minY="28" width="14" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="/images/back_arrow.png"/>
-                                <connections>
-                                    <action selector="back:" destination="F44-GI-GRu" eventType="touchDown" id="WPB-gZ-OPO"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oCk-iH-N3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Tct-LI-laW">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_history.png" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-xL-ngz">
+                                    <frame key="frameInset" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-RM-abw">
+                                    <frame key="frameInset" minX="8" minY="32" width="14" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="/images/back_arrow.png"/>
+                                    <connections>
+                                        <action selector="back:" destination="DiV-v1-qg4" eventType="touchDown" id="W3G-9O-KxT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dPa-JK-Qm6">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dPa-JK-Qm6" id="Srz-Ln-PKo">
+                                    <frame key="frameInset" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DiV-v1-qg4" id="LAH-aX-4jv"/>
+                            <outlet property="delegate" destination="DiV-v1-qg4" id="1Sr-AM-qXM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mye-ol-sTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="811"/>
+            <point key="canvasLocation" x="32.799999999999997" y="806.44677661169419"/>
         </scene>
     </scenes>
     <resources>
