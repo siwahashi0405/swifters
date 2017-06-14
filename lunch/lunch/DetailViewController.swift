@@ -10,9 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var mapWebView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // MAP
+        
+        self.mapWebView.loadRequest(URLRequest(url: URL(string: "https://www.google.co.jp/maps/@35.6528617,139.7457934,13z")!))
     }
 
     override func didReceiveMemoryWarning() {
