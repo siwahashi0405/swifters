@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import SwiftVideoBackground
 
 class TopViewController: UIViewController {
 
+    @IBOutlet var backgroundVideo: BackgroundVideo!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        backgroundVideo.createBackgroundVideo(name: "movies/Background", type: "mp4", alpha: 0.3)
     }
 
     override func didReceiveMemoryWarning() {

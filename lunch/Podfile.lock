@@ -1,12 +1,15 @@
 PODS:
   - SwiftGifOrigin (1.6.1)
+  - SwiftVideoBackground (0.06)
 
 DEPENDENCIES:
   - SwiftGifOrigin (~> 1.5)
+  - SwiftVideoBackground
 
 SPEC CHECKSUMS:
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
+  SwiftVideoBackground: 9099e41be1afad9f726cfc2014accb3330ad7ec1
 
-PODFILE CHECKSUM: f03933897f57742a2b59f4aedd5e7a4fb251a497
+PODFILE CHECKSUM: a2c2b18a54977c38a1f71f8849c60d9f0cc39a28
 
 COCOAPODS: 1.2.1

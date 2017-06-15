@@ -10,33 +10,35 @@ import UIKit
 import SwiftGifOrigin
 
 class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
+
     @IBOutlet weak var cameraView: UIImageView!
-    
+
+    @IBOutlet weak var message: UILabel!
+
     @IBOutlet weak var spinner: UIImageView!
 
-    //override func viewWillAppear() {
+    @IBOutlet weak var takePictureBtn: UIButton!
+
     override func viewWillAppear(_ animated: Bool) {
-        print("DiagnoseViewController")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.spinner.image = UIImage.gif(name: "images/load")   // スピナーセット
+        self.spinner.isHidden = true   // スピナー非表示
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     /**
      * カメラの撮影開始
      */
     @IBAction func takePicture(_ sender: AnyObject) {
-        print("takePicture")
-        
-        //        let sourceType: UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.camera
+        print("run take picture")
         // カメラが利用可能かチェック
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             // インスタンスの作成
@@ -51,31 +53,35 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             
         }
     }
-    
+
     /**
      * 撮影が完了時した時に呼ばれる
      */
     func imagePickerController(_ cameraPicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print("完了！")
-        //        print(info[UIImagePickerControllerEditedImage])
+
         if let image = info[UIImagePickerControllerOriginalImage] {
             print(image)
-            self.cameraView.image = image as? UIImage
-            self.spinner.image = UIImage.gif(name: "images/load")   // スピナー表示
-            //            Image2String(image: cameraView.image!)   // Base64に変換
+            self.cameraView.image = image as? UIImage   // 写真セット
+            self.cameraView.isHidden = false   // 写真表示
+            self.message.isHidden = true   // メッセージ非表示
+            self.spinner.isHidden = false   // スピナー表示
+            self.takePictureBtn.isHidden = true   // ボタン非表示
+//            Image2String(image: cameraView.image!)   // Base64に変換
         }
         cameraPicker.dismiss(animated: true, completion: nil)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.spinner.image = UIImage.gif(name: "")   // スピナー非表示
-            print("2秒後")
             // 2秒後に実行したい処理
+            self.cameraView.isHidden = true   // 写真非表示
+            self.message.isHidden = false   // メッセージ表示
+            self.spinner.isHidden = true   // スピナー非表示
+            self.takePictureBtn.isHidden = false   // ボタン表示
 //            let detailViewController = UIStoryboard(name: "DetailViewControllerStoryboard", bundle: nil).instantiateInitialViewController()!
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewControllerStoryboard")
 //            detailViewController.list = [0 : "聡吾", 1 : "5678", 2 : "メロン"]
             self.present(detailViewController, animated: true, completion: nil)
-            print("3秒後")
         }
     }
     

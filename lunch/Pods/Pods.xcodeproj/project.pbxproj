@@ -8,82 +8,103 @@
 
 /* Begin PBXBuildFile section */
 		0648BEE278E95EA24CD256330D86EF45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		26C7A151C98F9A6FD66E10EA2ADE85F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		26B81A3DA3ADC2B4DCA946B3DBBFB733 /* SwiftVideoBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA4CB762E9FBFBC9D071D6B3B7B7B30 /* SwiftVideoBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3201FAC8981A34769245699639CF7BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		354D220F9FE566CAF84003413D3D3572 /* Pods-lunch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 558D23318523282D8CAB954669779B06 /* Pods-lunch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E714F1B5C02F8C0087894F482173D5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		50A1CED798996E80FE340260DF79C987 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266B9FF0C3C718CDE79A1FA1AA034CE2 /* UIImage+Gif.swift */; };
 		524C73F3A656DA8F1791DFDA19CE58FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		55690DF535185F7DC635ECE29ABF82EF /* SwiftGifOrigin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D7B52D6D0DEC21E7D7BB881FA23C53 /* SwiftGifOrigin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61BB83975618EED47A7D320E855CEE99 /* SwiftGifOrigin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8BB19A15760EDE522022A00C0FFDD /* SwiftGifOrigin-dummy.m */; };
+		6D54A4B6A79DF5776B8A4446A90C7924 /* BackgroundVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB3A8F0EDD49CFD0D73CC22F0C3D52 /* BackgroundVideo.swift */; };
 		7659683BAEFE973B7967535DD7FA4772 /* Pods-lunchTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF745E431D4D3284CEAD0F69BB6A968 /* Pods-lunchTests-dummy.m */; };
-		7F292C1D8D3DAEABD389000D3F4F7147 /* SwiftGifOrigin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */; };
-		7F6F081DF2E52A15CBA9E18FD3B7FF6B /* SwiftGifOrigin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9006D703A6AA7458BF9F6613700B2B8C /* Pods-lunch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19778D223E3489A3A598BFE3A8E3CF00 /* Pods-lunch-dummy.m */; };
-		A8EFCBBBD941BE52F17A41D7D46B3B11 /* Pods-lunch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 558D23318523282D8CAB954669779B06 /* Pods-lunch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9869B4971DBEEF431056A2A11B354917 /* SwiftVideoBackground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFE3BB910C20B0656EAE7EC5DB0B54C /* SwiftVideoBackground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C83F8696545EEEEAF08D80483BB09013 /* Pods-lunchTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47B1D71343B0F8FEA8E81B8DD0031782 /* Pods-lunchTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D58BF18EFC53797B4A30DF68A6BB1FAF /* Pods-lunchUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 675E7E74DB47778BF463590CD158B719 /* Pods-lunchUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D63CD68D890F40DFB121A2BE68F528A8 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */; };
-		ED0BB58FD9F8D31F9DF74AECA07F2B1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		DA6CEFAA0900140E418FBC42A5F55DC8 /* SwiftVideoBackground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 862182EB82E5CA79874CFD4CD333D840 /* SwiftVideoBackground-dummy.m */; };
+		E1DE7E97003B8655D3A330129873D1A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F4A43ADA28DD4FEBA2FA7FD3E30378DB /* Pods-lunchUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4076C0C15ADCC391E636F67EC6506D17 /* Pods-lunchUITests-dummy.m */; };
+		FD0CC0224B3DBFBB991B6F96EAC160E0 /* Pods-lunch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19778D223E3489A3A598BFE3A8E3CF00 /* Pods-lunch-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B88878082A9330C1E93A9C44D866CFBD /* PBXContainerItemProxy */ = {
+		5D7A45A8C9917B502FBED720B784CE7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0B4DB738F1AD2FA650BAFC0CBF461E21;
+			remoteGlobalIDString = DB9BDAA5ECC8F02D5C3C1A6502AF009A;
+			remoteInfo = SwiftVideoBackground;
+		};
+		AF8012325FF5CA44C494B2069077FC4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22D818533D1E58875E2836C03EE22C1B;
 			remoteInfo = SwiftGifOrigin;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
-		0C907120A7715AB90284F3F20C89C58C /* SwiftGifOrigin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-prefix.pch"; sourceTree = "<group>"; };
+		03A3C6E4A1185494925990D27BB30F3A /* SwiftVideoBackground-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-prefix.pch"; sourceTree = "<group>"; };
 		14B3D03B0A8ED214DF4E4228745414A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19778D223E3489A3A598BFE3A8E3CF00 /* Pods-lunch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lunch-dummy.m"; sourceTree = "<group>"; };
 		1CD66C2D1BE8294B8F4AE6C707929C74 /* Pods-lunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lunch.debug.xcconfig"; sourceTree = "<group>"; };
+		1DFE3BB910C20B0656EAE7EC5DB0B54C /* SwiftVideoBackground-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-umbrella.h"; sourceTree = "<group>"; };
+		24D7B52D6D0DEC21E7D7BB881FA23C53 /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
+		266B9FF0C3C718CDE79A1FA1AA034CE2 /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		2B5B4F5E7EA220A30B90B73C8EB5E6CB /* SwiftGifOrigin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftGifOrigin.modulemap; sourceTree = "<group>"; };
+		2DFB3A8F0EDD49CFD0D73CC22F0C3D52 /* BackgroundVideo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundVideo.swift; path = SwiftVideoBackground/BackgroundVideo.swift; sourceTree = "<group>"; };
 		2F1BA4A31A57A7943FB9B6996E973FC8 /* Pods-lunchUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lunchUITests-resources.sh"; sourceTree = "<group>"; };
-		32EDDBEA9965CB0D70312CECED844AC7 /* Pods_lunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lunch.framework; path = "Pods-lunch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35ED8A76B4FB1447472934E794F6FFEC /* SwiftGifOrigin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-prefix.pch"; sourceTree = "<group>"; };
 		4076C0C15ADCC391E636F67EC6506D17 /* Pods-lunchUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lunchUITests-dummy.m"; sourceTree = "<group>"; };
 		453CBC7A1EBF0C9064B9F785B1A0ED7F /* Pods-lunchTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lunchTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		47B1D71343B0F8FEA8E81B8DD0031782 /* Pods-lunchTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lunchTests-umbrella.h"; sourceTree = "<group>"; };
 		4E9A48C5924E3AC01089B54131BB2C3D /* Pods-lunchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lunchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		558D23318523282D8CAB954669779B06 /* Pods-lunch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lunch-umbrella.h"; sourceTree = "<group>"; };
+		578A54D25AF2B321301F9464BFAAF3A0 /* Pods_lunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lunch.framework; path = "Pods-lunch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		578F3D40E887DB257A35AE13DA9DDB04 /* Pods-lunch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-lunch.modulemap"; sourceTree = "<group>"; };
 		5AF745E431D4D3284CEAD0F69BB6A968 /* Pods-lunchTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lunchTests-dummy.m"; sourceTree = "<group>"; };
-		5F82892FA6028D0F84BB9EC798A2E7CE /* SwiftGifOrigin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftGifOrigin.modulemap; sourceTree = "<group>"; };
-		63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGifOrigin.xcconfig; sourceTree = "<group>"; };
+		5D0C8D9317AD467C2CF80F36BB568CC3 /* Pods_lunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lunchTests.framework; path = "Pods-lunchTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF60C2BDB301861D30380218074C150 /* SwiftVideoBackground.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftVideoBackground.xcconfig; sourceTree = "<group>"; };
+		62D1C48E07001D2B1763F1929A4C0C03 /* SwiftGifOrigin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGifOrigin.xcconfig; sourceTree = "<group>"; };
+		651320111BD383D971E8B7F4B4312542 /* Pods_lunchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lunchUITests.framework; path = "Pods-lunchUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		675E7E74DB47778BF463590CD158B719 /* Pods-lunchUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lunchUITests-umbrella.h"; sourceTree = "<group>"; };
-		772627B8C907F857E26398194979672E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		754303883F0B135491365394818480BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		806B5F9A02704D77D6283733E0FB5516 /* Pods-lunchUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-lunchUITests.modulemap"; sourceTree = "<group>"; };
+		81DAFF5A11F6337B581F49A6BEE45681 /* SwiftVideoBackground.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftVideoBackground.modulemap; sourceTree = "<group>"; };
+		862182EB82E5CA79874CFD4CD333D840 /* SwiftVideoBackground-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftVideoBackground-dummy.m"; sourceTree = "<group>"; };
 		876F76D549A12F4A03E8E24458485956 /* Pods-lunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lunchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8DA4CB762E9FBFBC9D071D6B3B7B7B30 /* SwiftVideoBackground.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftVideoBackground.h; path = SwiftVideoBackground/SwiftVideoBackground.h; sourceTree = "<group>"; };
 		901F0392142E454F60B3F773E82D73D2 /* Pods-lunchUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lunchUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98C569E2E095777F45F81D87A7E9F2AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E32FFCDDE6105FADDB139589352F262 /* Pods-lunchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lunchTests.release.xcconfig"; sourceTree = "<group>"; };
-		A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		A111858FC9B8B2E9E02C4941858F0EBD /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVideoBackground.framework; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F46E06BAC93828EB94D6CBACEB6B99 /* Pods-lunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lunch.release.xcconfig"; sourceTree = "<group>"; };
 		B64FC4DAF0F053D4FC26F9EC2C3C6A0F /* Pods-lunch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lunch-acknowledgements.plist"; sourceTree = "<group>"; };
+		BAB8BB19A15760EDE522022A00C0FFDD /* SwiftGifOrigin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGifOrigin-dummy.m"; sourceTree = "<group>"; };
 		BD54D71F6386599E5BA147B08CA9DDB4 /* Pods-lunchUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lunchUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C45C7FB855BC76F67739C7142029C4B6 /* Pods-lunch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lunch-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C5ABBAB78266C49EEC87E07B3DEFB1AB /* Pods-lunchTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lunchTests-frameworks.sh"; sourceTree = "<group>"; };
-		D75302BBC8660D6AD9C9502DA3064F0D /* Pods_lunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lunchTests.framework; path = "Pods-lunchTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA21F34D9ADD4A8EF807ABF4138C539A /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGifOrigin.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD9802F027F18FD034836BB3D7A1C0A /* Pods-lunchTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-lunchTests.modulemap"; sourceTree = "<group>"; };
 		E53A969EE45B4C6F2596C8FE5ABAEB18 /* Pods-lunch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lunch-resources.sh"; sourceTree = "<group>"; };
 		EA077679EE55B23980B02CCDD3A99AC2 /* Pods-lunchTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lunchTests-resources.sh"; sourceTree = "<group>"; };
 		ECA46AF7CD1C06366BD3629FFA4F5D47 /* Pods-lunchTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lunchTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		ECF492B45511D519116F866437CEEE01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F03C780AACA23D54FB8BADEBBA61C93E /* Pods-lunch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lunch-frameworks.sh"; sourceTree = "<group>"; };
 		F615A395D99D73588AD26A789B931F26 /* Pods-lunchUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lunchUITests-frameworks.sh"; sourceTree = "<group>"; };
-		F68CEB45B60E0020F1EB01B6CB9D5E64 /* Pods_lunchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lunchUITests.framework; path = "Pods-lunchUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGifOrigin-dummy.m"; sourceTree = "<group>"; };
 		FCFCF6E00CB5D57E7A26929068B41BD0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF0E4924AD1C5CDBA15E62C6BBCB097F /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGifOrigin.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7F4F97F7E2F5D4505D4B6DF505BD51 /* Pods-lunchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lunchUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0E9665613796D2B700EA024F86482AB9 /* Frameworks */ = {
+		2DD03D019DF47292608D0BF6A64905B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C7A151C98F9A6FD66E10EA2ADE85F9 /* Foundation.framework in Frameworks */,
+				E1DE7E97003B8655D3A330129873D1A0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +116,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3508226123E58DB07A3C4C2C6C7185AF /* Frameworks */ = {
+		661FDE87F88836AF1F9FAF5DB0868888 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED0BB58FD9F8D31F9DF74AECA07F2B1D /* Foundation.framework in Frameworks */,
+				4E714F1B5C02F8C0087894F482173D5C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,31 +132,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7123A5918CF1E6075F7A47FCBACC4C96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3201FAC8981A34769245699639CF7BDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FD8CE5DEB17C1C76F236ADF231BD040 /* Support Files */ = {
+		3E8782F1ADDF9169F1C855AC03AF5D57 /* SwiftGifOrigin */ = {
 			isa = PBXGroup;
 			children = (
-				772627B8C907F857E26398194979672E /* Info.plist */,
-				5F82892FA6028D0F84BB9EC798A2E7CE /* SwiftGifOrigin.modulemap */,
-				63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */,
-				FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */,
-				0C907120A7715AB90284F3F20C89C58C /* SwiftGifOrigin-prefix.pch */,
-				0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */,
+				266B9FF0C3C718CDE79A1FA1AA034CE2 /* UIImage+Gif.swift */,
+				42C6CD423F288D2BDB00C2FED5857DC6 /* Support Files */,
+			);
+			name = SwiftGifOrigin;
+			path = SwiftGifOrigin;
+			sourceTree = "<group>";
+		};
+		42C6CD423F288D2BDB00C2FED5857DC6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECF492B45511D519116F866437CEEE01 /* Info.plist */,
+				2B5B4F5E7EA220A30B90B73C8EB5E6CB /* SwiftGifOrigin.modulemap */,
+				62D1C48E07001D2B1763F1929A4C0C03 /* SwiftGifOrigin.xcconfig */,
+				BAB8BB19A15760EDE522022A00C0FFDD /* SwiftGifOrigin-dummy.m */,
+				35ED8A76B4FB1447472934E794F6FFEC /* SwiftGifOrigin-prefix.pch */,
+				24D7B52D6D0DEC21E7D7BB881FA23C53 /* SwiftGifOrigin-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftGifOrigin";
 			sourceTree = "<group>";
 		};
-		26699727C250983FF494AD0DE3CFBC88 /* SwiftGifOrigin */ = {
+		51AF259ECF2E256BD27C616C138A3844 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */,
-				1FD8CE5DEB17C1C76F236ADF231BD040 /* Support Files */,
+				578A54D25AF2B321301F9464BFAAF3A0 /* Pods_lunch.framework */,
+				5D0C8D9317AD467C2CF80F36BB568CC3 /* Pods_lunchTests.framework */,
+				651320111BD383D971E8B7F4B4312542 /* Pods_lunchUITests.framework */,
+				FF0E4924AD1C5CDBA15E62C6BBCB097F /* SwiftGifOrigin.framework */,
+				A111858FC9B8B2E9E02C4941858F0EBD /* SwiftVideoBackground.framework */,
 			);
-			name = SwiftGifOrigin;
-			path = SwiftGifOrigin;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		568E91AFA8EFFF9F4F5659BF3AE282E3 /* Pods-lunch */ = {
@@ -156,13 +197,24 @@
 			path = "Target Support Files/Pods-lunch";
 			sourceTree = "<group>";
 		};
+		56C1CF5F53996AF81B1F483A840A6A97 /* SwiftVideoBackground */ = {
+			isa = PBXGroup;
+			children = (
+				2DFB3A8F0EDD49CFD0D73CC22F0C3D52 /* BackgroundVideo.swift */,
+				8DA4CB762E9FBFBC9D071D6B3B7B7B30 /* SwiftVideoBackground.h */,
+				E6E1164590F63E0A70F17A8E40A0BB40 /* Support Files */,
+			);
+			name = SwiftVideoBackground;
+			path = SwiftVideoBackground;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				CBDE1A1234E4B1D43F65A57BED38E87C /* Pods */,
-				D2B16F0788455050BB51486C4C4012C3 /* Products */,
+				B79EEEAC89A0085DEC0BE105DA6BE3E6 /* Pods */,
+				51AF259ECF2E256BD27C616C138A3844 /* Products */,
 				A7F78BCEF18ABD311B944B616AC22A6B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -195,6 +247,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B79EEEAC89A0085DEC0BE105DA6BE3E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E8782F1ADDF9169F1C855AC03AF5D57 /* SwiftGifOrigin */,
+				56C1CF5F53996AF81B1F483A840A6A97 /* SwiftVideoBackground */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,31 +264,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CBDE1A1234E4B1D43F65A57BED38E87C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				26699727C250983FF494AD0DE3CFBC88 /* SwiftGifOrigin */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D2B16F0788455050BB51486C4C4012C3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				32EDDBEA9965CB0D70312CECED844AC7 /* Pods_lunch.framework */,
-				D75302BBC8660D6AD9C9502DA3064F0D /* Pods_lunchTests.framework */,
-				F68CEB45B60E0020F1EB01B6CB9D5E64 /* Pods_lunchUITests.framework */,
-				DA21F34D9ADD4A8EF807ABF4138C539A /* SwiftGifOrigin.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E6E1164590F63E0A70F17A8E40A0BB40 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				754303883F0B135491365394818480BA /* Info.plist */,
+				81DAFF5A11F6337B581F49A6BEE45681 /* SwiftVideoBackground.modulemap */,
+				5DF60C2BDB301861D30380218074C150 /* SwiftVideoBackground.xcconfig */,
+				862182EB82E5CA79874CFD4CD333D840 /* SwiftVideoBackground-dummy.m */,
+				03A3C6E4A1185494925990D27BB30F3A /* SwiftVideoBackground-prefix.pch */,
+				1DFE3BB910C20B0656EAE7EC5DB0B54C /* SwiftVideoBackground-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftVideoBackground";
 			sourceTree = "<group>";
 		};
 		F2E71E9B8639C76511EAADED0728BF82 /* Pods-lunchTests */ = {
@@ -251,19 +307,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		66103C4EC71FB5CEEAB4F346F55FF0CB /* Headers */ = {
+		9F90EFF64A1AA46107DFDFA263B3E707 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F6F081DF2E52A15CBA9E18FD3B7FF6B /* SwiftGifOrigin-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74346F098C71694ED422D599C8551E4F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A8EFCBBBD941BE52F17A41D7D46B3B11 /* Pods-lunch-umbrella.h in Headers */,
+				55690DF535185F7DC635ECE29ABF82EF /* SwiftGifOrigin-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +323,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B91DEA9A66A0BF9A6645237BC8B02755 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9869B4971DBEEF431056A2A11B354917 /* SwiftVideoBackground-umbrella.h in Headers */,
+				26B81A3DA3ADC2B4DCA946B3DBBFB733 /* SwiftVideoBackground.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F43B2B68081154F740D7B5F2AA275A62 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,26 +340,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5E9CF2038737529492F041A5EDBE904 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354D220F9FE566CAF84003413D3D3572 /* Pods-lunch-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0B4DB738F1AD2FA650BAFC0CBF461E21 /* SwiftGifOrigin */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C3F881D6EB429B13F98C3C4D11302501 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */;
-			buildPhases = (
-				60FCFDCA5C239E3256277881753133E5 /* Sources */,
-				0E9665613796D2B700EA024F86482AB9 /* Frameworks */,
-				66103C4EC71FB5CEEAB4F346F55FF0CB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftGifOrigin;
-			productName = SwiftGifOrigin;
-			productReference = DA21F34D9ADD4A8EF807ABF4138C539A /* SwiftGifOrigin.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		1BE79F38DED3B907704C16109893581B /* Pods-lunchUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4A2E5C2A90101A3DA39983192095FA7 /* Build configuration list for PBXNativeTarget "Pods-lunchUITests" */;
@@ -317,25 +365,43 @@
 			);
 			name = "Pods-lunchUITests";
 			productName = "Pods-lunchUITests";
-			productReference = F68CEB45B60E0020F1EB01B6CB9D5E64 /* Pods_lunchUITests.framework */;
+			productReference = 651320111BD383D971E8B7F4B4312542 /* Pods_lunchUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		412D76A204971D631E411E61E4BFEFC2 /* Pods-lunch */ = {
+		22D818533D1E58875E2836C03EE22C1B /* SwiftGifOrigin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5AB5B2964FB2CD3DA65C55487A4CB62 /* Build configuration list for PBXNativeTarget "Pods-lunch" */;
+			buildConfigurationList = 9370327FFC8C748FE9CA9AEA57720173 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */;
 			buildPhases = (
-				AF391106792E5BDC5E51009F377F5DE7 /* Sources */,
-				3508226123E58DB07A3C4C2C6C7185AF /* Frameworks */,
-				74346F098C71694ED422D599C8551E4F /* Headers */,
+				316523588964569A25CA99F59B1C9FB5 /* Sources */,
+				661FDE87F88836AF1F9FAF5DB0868888 /* Frameworks */,
+				9F90EFF64A1AA46107DFDFA263B3E707 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C6F0ABE5DB6B639AA01C297DAE85B7CE /* PBXTargetDependency */,
+			);
+			name = SwiftGifOrigin;
+			productName = SwiftGifOrigin;
+			productReference = FF0E4924AD1C5CDBA15E62C6BBCB097F /* SwiftGifOrigin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63B95D85124F24ECDF9B5E5DFB89E1D9 /* Pods-lunch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B559FDAA874F715FA393B82DA5A4E36D /* Build configuration list for PBXNativeTarget "Pods-lunch" */;
+			buildPhases = (
+				8686489043EEFC24F0E412F8D10338B0 /* Sources */,
+				2DD03D019DF47292608D0BF6A64905B9 /* Frameworks */,
+				F5E9CF2038737529492F041A5EDBE904 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EF9FCCA72765B447E7A04B9BFF52638 /* PBXTargetDependency */,
+				4AC2BA4BD128F2571B98531D5B24EC13 /* PBXTargetDependency */,
 			);
 			name = "Pods-lunch";
 			productName = "Pods-lunch";
-			productReference = 32EDDBEA9965CB0D70312CECED844AC7 /* Pods_lunch.framework */;
+			productReference = 578A54D25AF2B321301F9464BFAAF3A0 /* Pods_lunch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BD54EDBD49078A2B81F1E9452F50142A /* Pods-lunchTests */ = {
@@ -352,7 +418,24 @@
 			);
 			name = "Pods-lunchTests";
 			productName = "Pods-lunchTests";
-			productReference = D75302BBC8660D6AD9C9502DA3064F0D /* Pods_lunchTests.framework */;
+			productReference = 5D0C8D9317AD467C2CF80F36BB568CC3 /* Pods_lunchTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DB9BDAA5ECC8F02D5C3C1A6502AF009A /* SwiftVideoBackground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA13DDD6185D31FBB379AE49264F660F /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */;
+			buildPhases = (
+				A47BDC685C63F9C4B96F600D0C6B9CAD /* Sources */,
+				7123A5918CF1E6075F7A47FCBACC4C96 /* Frameworks */,
+				B91DEA9A66A0BF9A6645237BC8B02755 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftVideoBackground;
+			productName = SwiftVideoBackground;
+			productReference = A111858FC9B8B2E9E02C4941858F0EBD /* SwiftVideoBackground.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -372,19 +455,29 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D2B16F0788455050BB51486C4C4012C3 /* Products */;
+			productRefGroup = 51AF259ECF2E256BD27C616C138A3844 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				412D76A204971D631E411E61E4BFEFC2 /* Pods-lunch */,
+				63B95D85124F24ECDF9B5E5DFB89E1D9 /* Pods-lunch */,
 				BD54EDBD49078A2B81F1E9452F50142A /* Pods-lunchTests */,
 				1BE79F38DED3B907704C16109893581B /* Pods-lunchUITests */,
-				0B4DB738F1AD2FA650BAFC0CBF461E21 /* SwiftGifOrigin */,
+				22D818533D1E58875E2836C03EE22C1B /* SwiftGifOrigin */,
+				DB9BDAA5ECC8F02D5C3C1A6502AF009A /* SwiftVideoBackground */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		316523588964569A25CA99F59B1C9FB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61BB83975618EED47A7D320E855CEE99 /* SwiftGifOrigin-dummy.m in Sources */,
+				50A1CED798996E80FE340260DF79C987 /* UIImage+Gif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		381E79D10C71AF78735C5C9205CB9C6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,31 +494,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60FCFDCA5C239E3256277881753133E5 /* Sources */ = {
+		8686489043EEFC24F0E412F8D10338B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F292C1D8D3DAEABD389000D3F4F7147 /* SwiftGifOrigin-dummy.m in Sources */,
-				D63CD68D890F40DFB121A2BE68F528A8 /* UIImage+Gif.swift in Sources */,
+				FD0CC0224B3DBFBB991B6F96EAC160E0 /* Pods-lunch-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF391106792E5BDC5E51009F377F5DE7 /* Sources */ = {
+		A47BDC685C63F9C4B96F600D0C6B9CAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9006D703A6AA7458BF9F6613700B2B8C /* Pods-lunch-dummy.m in Sources */,
+				6D54A4B6A79DF5776B8A4446A90C7924 /* BackgroundVideo.swift in Sources */,
+				DA6CEFAA0900140E418FBC42A5F55DC8 /* SwiftVideoBackground-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C6F0ABE5DB6B639AA01C297DAE85B7CE /* PBXTargetDependency */ = {
+		4AC2BA4BD128F2571B98531D5B24EC13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftVideoBackground;
+			target = DB9BDAA5ECC8F02D5C3C1A6502AF009A /* SwiftVideoBackground */;
+			targetProxy = 5D7A45A8C9917B502FBED720B784CE7A /* PBXContainerItemProxy */;
+		};
+		9EF9FCCA72765B447E7A04B9BFF52638 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftGifOrigin;
-			target = 0B4DB738F1AD2FA650BAFC0CBF461E21 /* SwiftGifOrigin */;
-			targetProxy = B88878082A9330C1E93A9C44D866CFBD /* PBXContainerItemProxy */;
+			target = 22D818533D1E58875E2836C03EE22C1B /* SwiftGifOrigin */;
+			targetProxy = AF8012325FF5CA44C494B2069077FC4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -466,40 +565,6 @@
 			};
 			name = Debug;
 		};
-		1EE3D5FDE996F63E366608E1CF9098BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftGifOrigin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		4A0D170670D7A0FA57E5445FC8292447 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF7F4F97F7E2F5D4505D4B6DF505BD51 /* Pods-lunchUITests.release.xcconfig */;
@@ -535,45 +600,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		54AFA34A04E679C174067AD9F3380320 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CD66C2D1BE8294B8F4AE6C707929C74 /* Pods-lunch.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-lunch/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-lunch/Pods-lunch.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_lunch;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		643C76AA582046977B7877822ED7A258 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -623,9 +649,43 @@
 			};
 			name = Debug;
 		};
-		8EB53C6DDC593D045FC4E57815EDD6DF /* Debug */ = {
+		6749C722123898D74B5800288CC7F0E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */;
+			baseConfigurationReference = 5DF60C2BDB301861D30380218074C150 /* SwiftVideoBackground.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftVideoBackground;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8FB5CDFCEA79B2F3886E15A72318E243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62D1C48E07001D2B1763F1929A4C0C03 /* SwiftGifOrigin.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -647,6 +707,45 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ADD39DE9B3D8B28C08BB1E90A1065F09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD66C2D1BE8294B8F4AE6C707929C74 /* Pods-lunch.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-lunch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lunch/Pods-lunch.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lunch;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -738,7 +837,7 @@
 			};
 			name = Release;
 		};
-		CFD9133A36E5A4D77E42DAC601381D46 /* Release */ = {
+		CB7E7508E65BB884DF4DEB4E2FA0CE05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5F46E06BAC93828EB94D6CBACEB6B99 /* Pods-lunch.release.xcconfig */;
 			buildSettings = {
@@ -775,6 +874,75 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		DE4BD7A799BB306E3ECF4A528FD942E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62D1C48E07001D2B1763F1929A4C0C03 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F836F649DAA57CEC1BADAC608CC697D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DF60C2BDB301861D30380218074C150 /* SwiftVideoBackground.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftVideoBackground;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		FFB8065709A8FF9EE555C30E58BB8047 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -824,11 +992,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3F881D6EB429B13F98C3C4D11302501 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */ = {
+		9370327FFC8C748FE9CA9AEA57720173 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8EB53C6DDC593D045FC4E57815EDD6DF /* Debug */,
-				1EE3D5FDE996F63E366608E1CF9098BB /* Release */,
+				8FB5CDFCEA79B2F3886E15A72318E243 /* Debug */,
+				DE4BD7A799BB306E3ECF4A528FD942E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B559FDAA874F715FA393B82DA5A4E36D /* Build configuration list for PBXNativeTarget "Pods-lunch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD39DE9B3D8B28C08BB1E90A1065F09 /* Debug */,
+				CB7E7508E65BB884DF4DEB4E2FA0CE05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -842,20 +1019,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5AB5B2964FB2CD3DA65C55487A4CB62 /* Build configuration list for PBXNativeTarget "Pods-lunch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54AFA34A04E679C174067AD9F3380320 /* Debug */,
-				CFD9133A36E5A4D77E42DAC601381D46 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F852A63E9DF0CFF186F5EA0ACB1EEFEA /* Build configuration list for PBXNativeTarget "Pods-lunchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B47A0FAFA10A42814F918DD3AF5E7791 /* Debug */,
 				FFB8065709A8FF9EE555C30E58BB8047 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA13DDD6185D31FBB379AE49264F660F /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F836F649DAA57CEC1BADAC608CC697D4 /* Debug */,
+				6749C722123898D74B5800288CC7F0E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
