@@ -31,6 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
+        // 最前面がTopViewControllerの場合のみ viewWillAppear を実行
+        if self.getForegroundViewController() is TopViewController {
+            self.window?.rootViewController?.viewWillAppear(true)
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -41,6 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // 最前面のViewControllerを取得する
+    func getForegroundViewController() -> UIViewController{
+        var vc = UIApplication.shared.keyWindow?.rootViewController
+        while let present = vc?.presentedViewController {
+            vc = present
+        }
+        return vc!
+    }
 }
 
