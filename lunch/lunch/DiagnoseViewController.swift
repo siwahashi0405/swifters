@@ -8,8 +8,9 @@
 
 import UIKit
 import SwiftGifOrigin
+import CoreLocation
 
-class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var cameraView: UIImageView!
 
@@ -19,14 +20,20 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
 
     @IBOutlet weak var takePictureBtn: UIButton!
 
-    override func viewWillAppear(_ animated: Bool) {
-    }
+    var locationManager: CLLocationManager!
+
+    var myLatitude: Double!
+
+    var myLongitude: Double!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.spinner.image = UIImage.gif(name: "images/load")   // スピナーセット
         self.spinner.isHidden = true   // スピナー非表示
+
+        locationManager = CLLocationManager()   // インスタンスの生成
+        locationManager.delegate = self   // CLLocationManagerDelegateプロトコルを実装するクラスを指定する
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,5 +127,45 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
      // Pass the selected object to the new view controller.
      }
      */
-    
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            print("ユーザーはこのアプリケーションに関してまだ選択を行っていません")
+            // 取得許可を求める
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .denied:
+            print("ローケーションサービスの設定が「無効」になっています (ユーザーによって、明示的に拒否されています）")
+            // 取得許可を求める
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .restricted:
+            print("このアプリケーションは位置情報サービスを使用できません(ユーザによって拒否されたわけではありません)")
+            // 取得許可を求める
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .authorizedAlways:
+            print("常時、位置情報の取得が許可されています。")
+            // 位置情報取得の開始処理
+            locationManager.startUpdatingLocation()
+            break
+        case .authorizedWhenInUse:
+            print("起動時のみ、位置情報の取得が許可されています。")
+            // 位置情報取得の開始処理
+            locationManager.startUpdatingLocation()
+            break
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.first
+        if location != nil {
+            // 位置情報セット
+            myLatitude = location?.coordinate.latitude
+            myLongitude = location?.coordinate.longitude
+            // 位置情報ストップ
+            locationManager.stopUpdatingLocation()
+        }
+    }
 }
