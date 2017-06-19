@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         // MAP
         
-        self.mapWebView.loadRequest(URLRequest(url: URL(string: "https://www.google.co.jp/maps/@35.6528617,139.7457934,13z")!))
+        self.mapWebView.loadRequest(URLRequest(url: URL(string: "https://swiftershoge.herokuapp.com/index.php/map?destinationName=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%E5%90%8D&destinationLat=34.65&destinationLong=135.50&currentLat=34.6578&currentLong=135.5067")!))
     }
 
     override func didReceiveMemoryWarning() {

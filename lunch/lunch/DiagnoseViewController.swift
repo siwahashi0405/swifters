@@ -29,9 +29,10 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // スピナー
         self.spinner.image = UIImage.gif(name: "images/load")   // スピナーセット
         self.spinner.isHidden = true   // スピナー非表示
-
+        // 位置情報取得手続き
         locationManager = CLLocationManager()   // インスタンスの生成
         locationManager.delegate = self   // CLLocationManagerDelegateプロトコルを実装するクラスを指定する
     }
@@ -54,7 +55,6 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             cameraPicker.cameraDevice = .front
             cameraPicker.delegate = self
             self.present(cameraPicker, animated: true, completion: nil)
-            
         } else {
             print("error")
             
@@ -65,7 +65,7 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
      * 撮影が完了時した時に呼ばれる
      */
     func imagePickerController(_ cameraPicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print("完了！")
+        print("take picture complete！")
 
         if let image = info[UIImagePickerControllerOriginalImage] {
             print(image)
@@ -115,18 +115,6 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
         return nil
         
     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
@@ -164,8 +152,18 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             // 位置情報セット
             myLatitude = location?.coordinate.latitude
             myLongitude = location?.coordinate.longitude
-            // 位置情報ストップ
+            // 位置情報取得ストップ
             locationManager.stopUpdatingLocation()
         }
     }
+
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }
