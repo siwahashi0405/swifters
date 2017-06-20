@@ -20,7 +20,7 @@ class TopViewController: UIViewController {
     @IBOutlet var historyBtn: UIButton!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+         super.viewDidLoad()
     }
 
     
