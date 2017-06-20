@@ -15,9 +15,6 @@ class HistoryTableViewController: UITableViewController{
     
     var histories: [Hisotry]? = []
     
-    //var list: Dictionary<Int, Any> = [0 : "聡吾", 1 : "5678", 2 : "メロン"]//[:]
-    var list = Dictionary<Int, Any>()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
