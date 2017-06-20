@@ -10,10 +10,43 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController{
     
-    var list: Dictionary<Int, Any> = [0 : "聡吾", 1 : "5678", 2 : "メロン"]//[:]
+    
+    //var list: Dictionary<Int, Any> = [0 : "聡吾", 1 : "5678", 2 : "メロン"]//[:]
+    var list = Dictionary<Int, Any>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = URL(string: "http://api.fixer.io/latest")
+        
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil
+            {
+                print("ERROR")
+            }
+            else
+            {
+                if let content = data
+                {
+                    do
+                    {
+                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        print(myJson)
+                        if let rates = myJson["rates"] as? NSDictionary
+                        {
+                            print(rates)
+                            self.list[0] = "メロン"
+                            self.list[1] = rates["AUD"]
+                            print(self.list)
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+        }
+        task.resume()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -47,7 +80,6 @@ class HistoryTableViewController: UITableViewController{
      */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        
         // Configure the cell...
         cell.textLabel?.text = list[indexPath[1]] as! String
         
@@ -106,7 +138,7 @@ class HistoryTableViewController: UITableViewController{
      // Pass the selected object to the new view controller.
      }
      */
-
+    
     @IBAction func back(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
