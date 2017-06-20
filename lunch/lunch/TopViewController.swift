@@ -23,6 +23,7 @@ class TopViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    
     override func viewWillAppear(_ animated: Bool) {
         let i = arc4random_uniform(7) + 1   // 1〜7で乱数を発生
         backgroundVideoView = BackgroundVideo(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
