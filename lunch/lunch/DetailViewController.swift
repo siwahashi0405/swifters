@@ -10,14 +10,34 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var restaurantName: String!
+    
+    var restaurantUrlMobile: URL!
+
+    var restaurantImageUrl: URL!
+
+    var restaurantLat: Double!
+
+    var restaurantLong: Double!
+
+    var currentLat: Double!
+
+    var currentLong: Double!
+
     @IBOutlet weak var mapWebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // MAP
-        
-        self.mapWebView.loadRequest(URLRequest(url: URL(string: "https://swiftershoge.herokuapp.com/index.php/map?destinationName=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%E5%90%8D&destinationLat=34.65&destinationLong=135.50&currentLat=34.6578&currentLong=135.5067")!))
+        let mapUrl = "https://swiftershoge.herokuapp.com/index.php/map" +
+                     "?destinationName=\(restaurantName.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)! as String)" +
+                     "&destinationLat=\(String(restaurantLat))" +
+                     "&destinationLong=\(String(restaurantLong))" +
+                     "&currentLat=\(String(currentLat))" +
+                     "&currentLong=\(String(currentLat))"
+        print("mapUrl:" + mapUrl)
+        self.mapWebView.loadRequest(URLRequest(url: URL(string: mapUrl)!))
     }
 
     override func didReceiveMemoryWarning() {
