@@ -11,13 +11,17 @@ import UIKit
 class HistoryTableViewController: UITableViewController{
     
     
+    @IBOutlet var tableview: UITableView!
+    
+    var histories: [Hisotry]? = []
+    
     //var list: Dictionary<Int, Any> = [0 : "聡吾", 1 : "5678", 2 : "メロン"]//[:]
     var list = Dictionary<Int, Any>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "http://api.fixer.io/latest")
+        let url = URL(string: "https://swiftershoge.herokuapp.com/index.php/history/1")
         
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil
@@ -26,25 +30,32 @@ class HistoryTableViewController: UITableViewController{
             }
             else
             {
-                if let content = data
-                {
-                    do
-                    {
-                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        print(myJson)
-                        if let rates = myJson["rates"] as? NSDictionary
-                        {
-                            print(rates)
-                            self.list[0] = "メロン"
-                            self.list[1] = rates["AUD"]
-                            print(self.list)
+                // Historyswift
+                self.histories = [Hisotry]()
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String : AnyObject]
+
+                    if let historiesFromJson = json["restaurant"] as? [[String : AnyObject]] {
+                        for historyFromJson in historiesFromJson {
+                            let history = Hisotry()
+                            if let name = historyFromJson["name"] as? String, let url = historyFromJson["url_mobile"] as? String, let urlToImage = historyFromJson["image_url"] as? String {
+                                
+                                history.name = name
+                                history.url = url
+                                history.imageUrl = urlToImage
+                            }
+                            self.histories?.append(history)
                         }
                     }
-                    catch
-                    {
+                    DispatchQueue.main.async {
+                        self.tableview.reloadData()
                     }
+                    
+                } catch let error {
+                    print(error)
                 }
             }
+            
         }
         task.resume()
         
@@ -72,16 +83,19 @@ class HistoryTableViewController: UITableViewController{
      */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return list.count
+        print(self.histories?.count)
+        return self.histories?.count ?? 0
     }
     
     /**
      * セルに値を設定するデータソースメソッド（必須）
      */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = UITableViewCell() //tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryCell
+        
         // Configure the cell...
-        cell.textLabel?.text = list[indexPath[1]] as! String
+        cell.textLabel?.text = self.histories?[indexPath.item].name //list[indexPath[1]] as! String
+        //cell.title.text = "test"
         
         return cell
     }
@@ -91,7 +105,11 @@ class HistoryTableViewController: UITableViewController{
      */
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
-        self.dismiss(animated: true, completion: nil)   // 戻る
+        //self.dismiss(animated: true, completion: nil)   // 戻る
+        var UrlRequest = self.histories?[indexPath.item].url
+        if let url = URL(string: UrlRequest!), UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     /*
