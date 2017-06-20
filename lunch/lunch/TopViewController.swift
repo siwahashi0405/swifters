@@ -20,9 +20,8 @@ class TopViewController: UIViewController {
     @IBOutlet var historyBtn: UIButton!
 
     override func viewDidLoad() {
-         super.viewDidLoad()
+        super.viewDidLoad()
     }
-
     
     override func viewWillAppear(_ animated: Bool) {
         let i = arc4random_uniform(7) + 1   // 1〜7で乱数を発生
