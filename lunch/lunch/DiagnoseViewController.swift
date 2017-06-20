@@ -22,9 +22,9 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
 
     var locationManager: CLLocationManager!
 
-    var currentLat: Double! = 34.6578
+    var currentLat: Double! = 35.664342
 
-    var currentLong: Double! = 135.506
+    var currentLong: Double! = 139.714222
     
     var myUuid: String!
     
@@ -41,80 +41,6 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
         self.locationManager.delegate = self   // CLLocationManagerDelegateプロトコルを実装するクラスを指定する
         // UUID
         self.myUuid = UIDevice.current.identifierForVendor!.uuidString
-        
-        
-        
-        
-        
-        
-        // apiデータ取得
-        /*let apiUrl = "https://swiftershoge.herokuapp.com/index.php/face" +
-            "?uuid=\(myUuid! as String)" +
-            "&image_base64=test" //+
-//            "&user_latitude=\(String(currentLat))" +
-//        "&user_longtude=\(String(currentLong))"
-        print("apiUrl:" + apiUrl)
-        let url = URL(string: apiUrl)
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                print("error")
-            } else {
-                if let content = data {
-                    do {
-                        // 取得成功
-                        // JSON化
-                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        let restaurant = myJson["restaurant"] as! [String:AnyObject]
-                        print(restaurant["name"])
-//                        let json = myJson["restaurant"] as! [String: String]
-                        //json["fffff"]
-                      //  print(json["name"])
-                        
-                        
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            // 1秒後（即時処理だとエラーが発生する為）に実行したい処理
-                            self.cameraView.isHidden = true   // 写真非表示
-                            self.message.isHidden = false   // メッセージ表示
-                            self.spinner.isHidden = true   // スピナー非表示
-                            self.takePictureBtn.isHidden = false   // ボタン表示
-                            
-                            // 値渡し
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewControllerStoryboard") as! DetailViewController
-//                            detailViewController.restaurantName = myJson["restaurant"]["name"]
-                            detailViewController.restaurantUrlMobile = URL(string: "http://qiita.com/harumakiyukko/items/87f2a7175694d252f311")
-                            detailViewController.restaurantImageUrl = URL(string: "http://qiita.com/harumakiyukko/items/87f2a7175694d252f311")
-                            detailViewController.restaurantLat = 34.657
-                            detailViewController.restaurantLong = 135.506
-                            detailViewController.currentLat = 34.6578
-                            detailViewController.currentLong = 135.506
-                            self.present(detailViewController, animated: true, completion: nil)
-                        }
-                    } catch {
-                        // 取得失敗
-                        print("could not get api data")
-                    }
-                }
-            }
-        }
-        task.resume()*/
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -160,7 +86,9 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
         // apiデータ取得
         let apiUrl = "https://swiftershoge.herokuapp.com/index.php/face" +
                      "?uuid=\(myUuid! as String)" +
+/*
                      "&image_base64=\(imageBase64! as String)" +
+*/
                      "&user_latitude=\(String(currentLat))" +
                      "&user_longtude=\(String(currentLong))"
         print("apiUrl:" + apiUrl)
@@ -172,27 +100,37 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
                 if let content = data {
                     do {
                         // 取得成功
-                        // JSON化
-                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        print(myJson)
-                        
+                        // JSON解析
+                        let apiData = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        let restaurant = apiData["restaurant"] as! [String:AnyObject]
+
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             // 1秒後（即時処理だとエラーが発生する為）に実行したい処理
                             self.cameraView.isHidden = true   // 写真非表示
                             self.message.isHidden = false   // メッセージ表示
                             self.spinner.isHidden = true   // スピナー非表示
                             self.takePictureBtn.isHidden = false   // ボタン表示
-                            
+
                             // 値渡し
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewControllerStoryboard") as! DetailViewController
-                            detailViewController.restaurantName = "岩橋"
-                            detailViewController.restaurantUrlMobile = URL(string: "http://qiita.com/harumakiyukko/items/87f2a7175694d252f311")
-                            detailViewController.restaurantImageUrl = URL(string: "http://qiita.com/harumakiyukko/items/87f2a7175694d252f311")
-                            detailViewController.restaurantLat = 34.657
-                            detailViewController.restaurantLong = 135.506
-                            detailViewController.currentLat = 34.6578
-                            detailViewController.currentLong = 135.506
+                            detailViewController.comment = apiData["comment"] as! String
+                            detailViewController.restaurantName = restaurant["name"] as! String
+                            if restaurant["pr"]!["pr_short"] is NSNull {
+                                detailViewController.pr = "swiftersオススメ！！！"
+                            } else {
+                                detailViewController.pr = restaurant["pr"]!["pr_short"] as! String
+                            }
+                            detailViewController.restaurantUrlMobile = URL(string: restaurant["url_mobile"] as! String)
+                            if restaurant["image_url"]!["shop_image1"] is NSNull {
+                                detailViewController.restaurantImageUrl = URL(string: "http://is2.mzstatic.com/image/thumb/Purple111/v4/e8/a4/35/e8a4357f-465e-8099-b8f7-e31695411c73/source/1200x630bb.jpg")
+                            } else {
+                                detailViewController.restaurantImageUrl = URL(string: restaurant["image_url"]!["shop_image1"] as! String)
+                            }
+                            detailViewController.restaurantLat = (restaurant["latitude"] as! NSString).doubleValue
+                            detailViewController.restaurantLong = (restaurant["longitude"] as! NSString).doubleValue
+                            detailViewController.currentLat = self.currentLat
+                            detailViewController.currentLong = self.currentLong
                             self.present(detailViewController, animated: true, completion: nil)
                         }
                     } catch {
@@ -203,56 +141,6 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             }
         }
         task.resume()
-        
-        
-        
-        
-        
-        /*
-        let url = URL(string: "http://api.fixer.io/latest")
-        
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                print("error")
-            } else {
-                if let content = data {
-                    do {
-                        // 取得成功
-                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        print(myJson)
-                        
-                        // 取得後に実行したい処理
-                        self.cameraView.isHidden = true   // 写真非表示
-                        self.message.isHidden = false   // メッセージ表示
-                        self.spinner.isHidden = true   // スピナー非表示
-                        self.takePictureBtn.isHidden = false   // ボタン表示
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewControllerStoryboard")
-//                      detailViewController.list = [0 : "聡吾", 1 : "5678", 2 : "メロン"]
-                        
-                        // 画面遷移
-                        self.present(detailViewController, animated: true, completion: nil)
-                    } catch {
-                        // 取得失敗
-                        print("could not get api data")
-                    }
-                }
-            }
-        }
-        task.resume()
-        */
-        /*DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            // 2秒後に実行したい処理
-            self.cameraView.isHidden = true   // 写真非表示
-            self.message.isHidden = false   // メッセージ表示
-            self.spinner.isHidden = true   // スピナー非表示
-            self.takePictureBtn.isHidden = false   // ボタン表示
-//            let detailViewController = UIStoryboard(name: "DetailViewControllerStoryboard", bundle: nil).instantiateInitialViewController()!
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewControllerStoryboard")
-//            detailViewController.list = [0 : "聡吾", 1 : "5678", 2 : "メロン"]
-            self.present(detailViewController, animated: true, completion: nil)
-        }*/
     }
     
     @IBAction func back(_ sender: AnyObject) {
