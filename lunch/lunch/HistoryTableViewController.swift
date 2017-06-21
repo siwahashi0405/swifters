@@ -37,7 +37,7 @@ class HistoryTableViewController: UITableViewController{
                             let history = Hisotry()
                             if let name = historyFromJson["name"] as? String, let url = historyFromJson["url_mobile"] as? String, let urlToImage = historyFromJson["image_url"] as? String {
                                 
-                                history.name = name
+                                history.title = name
                                 history.url = url
                                 history.imageUrl = urlToImage
                             }
@@ -91,7 +91,7 @@ class HistoryTableViewController: UITableViewController{
         let cell = UITableViewCell() //tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryCell
         
         // Configure the cell...
-        cell.textLabel?.text = self.histories?[indexPath.item].name //list[indexPath[1]] as! String
+        cell.textLabel?.text = self.histories?[indexPath.item].title //list[indexPath[1]] as! String
         //cell.title.text = "test"
         
         return cell

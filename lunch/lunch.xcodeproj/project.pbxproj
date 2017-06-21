@@ -22,6 +22,7 @@
 		B348D5011EF2C804003427F7 /* movies in Resources */ = {isa = PBXBuildFile; fileRef = B348D5001EF2C804003427F7 /* movies */; };
 		C4B486466BA322C02C869FA8 /* Pods_lunchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FDDD68D237E7B54BC1E311 /* Pods_lunchUITests.framework */; };
 		D1685BABB75526B1772989C5 /* Pods_lunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062FF9C586F9CC1245F44F6E /* Pods_lunch.framework */; };
+		D69B09DD1EF9F68C007C0578 /* Hisotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B09DC1EF9F68C007C0578 /* Hisotry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		BF1B8C09B937CDC584BCECB7 /* Pods-lunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-lunch/Pods-lunch.release.xcconfig"; sourceTree = "<group>"; };
 		C2EAFBB890354FD3527AF33F /* Pods_lunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD34DBAFD72B2E4CCE1ECC0E /* Pods-lunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lunchTests/Pods-lunchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D69B09DC1EF9F68C007C0578 /* Hisotry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hisotry.swift; sourceTree = "<group>"; };
 		F6FE4E8EFC22D5310A49C1B4 /* Pods-lunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lunch/Pods-lunch.debug.xcconfig"; sourceTree = "<group>"; };
 		F701EA76F8FDAA43DC2B40EC /* Pods-lunchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lunchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-lunchUITests/Pods-lunchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F8FDDD68D237E7B54BC1E311 /* Pods_lunchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lunchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				37F046521EC176BC008E3F81 /* Info.plist */,
 				37A0F2DA1EEE5FE60034A915 /* DiagnoseViewController.swift */,
 				B31E0D551EF02FB1006D07C3 /* DetailViewController.swift */,
+				D69B09DC1EF9F68C007C0578 /* Hisotry.swift */,
 			);
 			path = lunch;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69B09DD1EF9F68C007C0578 /* Hisotry.swift in Sources */,
 				37F046491EC176BC008E3F81 /* TopViewController.swift in Sources */,
 				37A0F2D91EEE5FAA0034A915 /* HistoryTableViewController.swift in Sources */,
 				B31E0D561EF02FB1006D07C3 /* DetailViewController.swift in Sources */,
