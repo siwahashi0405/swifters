@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,11 +27,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arb-gS-cKe">
-                                <rect key="frame" x="57" y="578" width="260" height="48"/>
+                                <rect key="frame" x="57" y="544" width="260" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_camera.png"/>
                                 <connections>
                                     <segue destination="F44-GI-GRu" kind="presentation" id="4Ps-qH-vfc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-tr-oWr">
+                                <rect key="frame" x="57" y="599" width="260" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="/images/btn_history.png"/>
+                                <connections>
+                                    <segue destination="DiV-v1-qg4" kind="presentation" id="jpy-Oz-XZe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,6 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="diagnoseBtn" destination="arb-gS-cKe" id="dTG-qK-EUV"/>
+                        <outlet property="historyBtn" destination="1QF-tr-oWr" id="jfH-Jv-sDc"/>
                         <outlet property="titleView" destination="F3d-bR-mWQ" id="TBL-KR-mCB"/>
                     </connections>
                 </viewController>
@@ -71,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v20-Yb-HEA">
-                                <rect key="frame" x="57" y="578" width="260" height="48"/>
+                                <rect key="frame" x="57" y="544" width="260" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_camera.png"/>
                                 <connections>
@@ -136,7 +145,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCT-eE-oNr">
-                                <rect key="frame" x="57" y="578" width="260" height="48"/>
+                                <rect key="frame" x="57" y="544" width="260" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_again.png"/>
                                 <connections>
@@ -267,7 +276,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dPa-JK-Qm6" id="Srz-Ln-PKo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-6O-QmY">
@@ -317,6 +326,7 @@
         <image name="/images/bar_title.png" width="640" height="171"/>
         <image name="/images/btn_again.png" width="640" height="171"/>
         <image name="/images/btn_camera.png" width="640" height="171"/>
+        <image name="/images/btn_history.png" width="16" height="16"/>
         <image name="/images/frame.png" width="16" height="16"/>
         <image name="/images/icon.png" width="16" height="16"/>
         <image name="/images/logo.png" width="640" height="171"/>
