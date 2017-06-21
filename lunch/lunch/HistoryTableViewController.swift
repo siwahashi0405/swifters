@@ -14,12 +14,16 @@ class HistoryTableViewController: UITableViewController{
     @IBOutlet var tableview: UITableView!
     
     var histories: [Hisotry]? = []
+    var myUuid: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = URL(string: "https://swiftershoge.herokuapp.com/index.php/history/1")
-        
+        // UUID
+        self.myUuid = UIDevice.current.identifierForVendor!.uuidString
+        print(self.myUuid)
+
+        let url = URL(string: "https://swiftershoge.herokuapp.com/index.php/history/\(myUuid! as String)")
+        print(url)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil
             {
