@@ -17,20 +17,24 @@ class TopViewController: UIViewController {
 
     @IBOutlet var diagnoseBtn: UIButton!
 
+/*
     @IBOutlet var historyBtn: UIButton!
+*/
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
-        let i = arc4random_uniform(3 - 1) + 1   // 1・2・3で乱数を発生
+        let i = arc4random_uniform(7) + 1   // 1〜7で乱数を発生
         backgroundVideoView = BackgroundVideo(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
         backgroundVideoView.createBackgroundVideo(name: "movies/Background_" + String(i), type: "mp4", alpha: 0.3)
 
         backgroundVideoView.addSubview(titleView)
         backgroundVideoView.addSubview(diagnoseBtn)
+/*
         backgroundVideoView.addSubview(historyBtn)
+*/
 
         self.view.addSubview(backgroundVideoView)
     }
