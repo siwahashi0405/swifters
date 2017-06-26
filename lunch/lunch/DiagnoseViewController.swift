@@ -79,7 +79,7 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             self.message.isHidden = true   // メッセージ非表示
             self.spinner.isHidden = false   // スピナー表示
             self.takePictureBtn.isHidden = true   // ボタン非表示
-            self.imageBase64 = Image2String(image: cameraView.image!)   // Base64に変換
+            self.imageBase64 = Image2String(image: self.cameraView.image!)   // Base64に変換
         }
         cameraPicker.dismiss(animated: true, completion: nil)
         
@@ -87,14 +87,13 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
         let apiUrl = "https://swiftershoge.herokuapp.com/index.php/face"
         var request = URLRequest(url: URL(string: apiUrl)!)
         request.httpMethod = "POST"
-        let postString = "uuid=\(myUuid! as String)&image_base64 =\(imageBase64! as String)&user_latitude=\(String(currentLat))&user_longtude=\(String(currentLong))"
+        let postString = "uuid=\(myUuid! as String)&image_base64=\(imageBase64! as String)&user_latitude=\(String(currentLat))&user_longitude=\(String(currentLong))"
         request.httpBody = postString.data(using: .utf8)
 
         let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
             DispatchQueue.main.async {
                 do {
                     if (error == nil) {
-                        let content = String(data: data!, encoding: .utf8)!
                         // 取得成功
                         // JSON解析
                         let apiData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
@@ -129,6 +128,21 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
                             self.present(detailViewController, animated: true, completion: nil)
 
                         } else if apiData["result"] as! Int == 1 {
+                            //// 正常：顔の検出できず
+                            print("正常：顔の検出できず")
+                            self.resetCamera()
+                            /// アラート
+                            // アラートを作成
+                            let alert = UIAlertController(
+                                title: "LUNCHからあなたへ",
+                                message: "表情がうまく検出できませんでした。もう一度表情を撮影してください！",
+                                preferredStyle: .alert)
+                            // アラートにボタンをつける
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            // アラート表示
+                            self.present(alert, animated: true, completion: nil)
+                            
+                        } else if apiData["result"] as! Int == 2 {
                             //// 正常：レストランなし
                             print("正常：レストランなし")
                             self.resetCamera()
@@ -142,16 +156,16 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
                             alert.addAction(UIAlertAction(title: "OK", style: .default))
                             // アラート表示
                             self.present(alert, animated: true, completion: nil)
-
+                            
                         } else if apiData["result"] as! Int == 901 {
-                            //// 異常：顔の検出できず
-                            print("異常：顔の検出できず")
+                            //// 異常：パラメーター不足
+                            print("異常：パラメーター不足")
                             self.resetCamera()
                             /// アラート
                             // アラートを作成
                             let alert = UIAlertController(
                                 title: "LUNCHからあなたへ",
-                                message: "表情がうまく検出できませんでした。もう一度表情を撮影してください！",
+                                message: "上手く通信できませんでした。もう一度表情を撮影してください！",
                                 preferredStyle: .alert)
                             // アラートにボタンをつける
                             alert.addAction(UIAlertAction(title: "OK", style: .default))
