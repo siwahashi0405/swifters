@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -244,9 +244,98 @@
             </objects>
             <point key="canvasLocation" x="1712.8" y="36.431784107946029"/>
         </scene>
+        <!--History View Controller-->
+        <scene sceneID="Y2p-tr-zVx">
+            <objects>
+                <viewController id="ybi-em-Pxi" customClass="HistoryViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WLM-Qb-kTe"/>
+                        <viewControllerLayoutGuide type="bottom" id="wra-gE-H9w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IKy-6B-IFk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyu-os-o07">
+                                <rect key="frame" x="0.0" y="8" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="履歴" id="wzu-U4-ImE"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eXl-VE-FlV">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyViewCell" rowHeight="115" id="eva-3h-9PU" customClass="HistoryViewCell" customModule="lunch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eva-3h-9PU" id="Znr-h4-2Cx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bW1-9u-TcE">
+                                                    <rect key="frame" x="8" y="12.5" width="110" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="OL2-LF-dee"/>
+                                                        <constraint firstAttribute="height" constant="90" id="TVi-bn-qrI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title!!! Title!!! Title!!! Title!!! Title!!! Title!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-3e-pwg">
+                                                    <rect key="frame" x="126" y="37" width="241" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bW1-9u-TcE" firstAttribute="leading" secondItem="Znr-h4-2Cx" secondAttribute="leadingMargin" id="GPb-hs-edS"/>
+                                                <constraint firstItem="bW1-9u-TcE" firstAttribute="centerY" secondItem="Znr-h4-2Cx" secondAttribute="centerY" id="W1u-Rt-PFg"/>
+                                                <constraint firstItem="OoB-3e-pwg" firstAttribute="centerY" secondItem="bW1-9u-TcE" secondAttribute="centerY" id="ado-KC-1yX"/>
+                                                <constraint firstItem="OoB-3e-pwg" firstAttribute="leading" secondItem="bW1-9u-TcE" secondAttribute="trailing" constant="8" id="hUP-jS-Wda"/>
+                                                <constraint firstAttribute="trailing" secondItem="OoB-3e-pwg" secondAttribute="trailing" constant="8" id="yVB-dc-o2N"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="bW1-9u-TcE" id="zPJ-kU-NVc"/>
+                                            <outlet property="title" destination="OoB-3e-pwg" id="3Pd-iP-xe4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ybi-em-Pxi" id="4ne-Yh-GQs"/>
+                                    <outlet property="delegate" destination="ybi-em-Pxi" id="AGn-Vn-AWk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eXl-VE-FlV" secondAttribute="trailing" id="AAy-RV-00P"/>
+                            <constraint firstItem="eXl-VE-FlV" firstAttribute="top" secondItem="Oyu-os-o07" secondAttribute="bottom" id="Qq4-aN-BYm"/>
+                            <constraint firstItem="Oyu-os-o07" firstAttribute="leading" secondItem="IKy-6B-IFk" secondAttribute="leading" id="XF0-Sp-rIv"/>
+                            <constraint firstItem="Oyu-os-o07" firstAttribute="top" secondItem="IKy-6B-IFk" secondAttribute="top" id="oTr-3f-wwj"/>
+                            <constraint firstItem="wra-gE-H9w" firstAttribute="top" secondItem="eXl-VE-FlV" secondAttribute="bottom" id="v1G-4Y-SqA"/>
+                            <constraint firstAttribute="trailing" secondItem="Oyu-os-o07" secondAttribute="trailing" id="xG6-wO-udc"/>
+                            <constraint firstItem="eXl-VE-FlV" firstAttribute="top" secondItem="Oyu-os-o07" secondAttribute="bottom" id="xsp-if-6iI"/>
+                            <constraint firstItem="eXl-VE-FlV" firstAttribute="leading" secondItem="IKy-6B-IFk" secondAttribute="leading" id="z0e-xe-UVa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="eXl-VE-FlV" id="M39-te-xmy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4O-3b-uqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-767.20000000000005" y="800.14992503748135"/>
+        </scene>
         <!--History Table View Controller-->
         <scene sceneID="4hi-Q8-wEt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mye-ol-sTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="DiV-v1-qg4" customClass="HistoryTableViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="O04-Ir-0JW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -315,7 +404,6 @@
                         <outlet property="tableview" destination="O04-Ir-0JW" id="Xo1-tq-R4z"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mye-ol-sTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="806.44677661169419"/>
         </scene>
