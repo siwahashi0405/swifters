@@ -12,10 +12,13 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
   
     @IBOutlet weak var tableview: UITableView!
     
+    var myUuid: String!
     var histories: [Hisotry]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // UUID
+        self.myUuid = UIDevice.current.identifierForVendor!.uuidString
         
         let url = URL(string: "https://swiftershoge.herokuapp.com/index.php/history/1")
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -70,6 +73,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyViewCell", for: indexPath) as! HistoryViewCell
         
+        if (self.histories?[indexPath.item].imageUrl?.isEmpty)! {
+            self.histories?[indexPath.item].imageUrl = "http://is2.mzstatic.com/image/thumb/Purple111/v4/e8/a4/35/e8a4357f-465e-8099-b8f7-e31695411c73/source/1200x630bb.jpg"
+        }
+        
         cell.title.text = self.histories?[indexPath.item].title
         cell.imgView.downloadImage(from: (self.histories?[indexPath.item].imageUrl!)!)
         
@@ -83,6 +90,15 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.histories?.count ?? 0
+    }
+    
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+        //self.dismiss(animated: true, completion: nil)   // 戻る
+        let UrlRequest = self.histories?[indexPath.item].url
+        if let url = URL(string: UrlRequest!), UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url, options: [:])
+        }
     }
 
     /*
@@ -99,10 +115,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 extension UIImageView {
     
     func downloadImage(from url: String){
-      
-        if url.isEmpty {
-            let url = "http://www.ntochi.jp/wp-content/themes/ntochi/images/noimage.gif?x67336"
-        }
+
         let urlRequest = URLRequest(url: URL(string: url)!)
 
     print(url)

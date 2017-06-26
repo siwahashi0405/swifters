@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_history.png"/>
                                 <connections>
-                                    <segue destination="DiV-v1-qg4" kind="presentation" id="jpy-Oz-XZe"/>
+                                    <segue destination="ybi-em-Pxi" kind="presentation" id="DGW-34-UYy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -279,10 +279,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bW1-9u-TcE">
-                                                    <rect key="frame" x="8" y="12.5" width="110" height="90"/>
+                                                    <rect key="frame" x="8" y="2.5" width="110" height="110"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="OL2-LF-dee"/>
-                                                        <constraint firstAttribute="height" constant="90" id="TVi-bn-qrI"/>
+                                                        <constraint firstAttribute="height" constant="110" id="eCN-vn-wEH"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title!!! Title!!! Title!!! Title!!! Title!!! Title!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-3e-pwg">
@@ -335,7 +335,6 @@
         <!--History Table View Controller-->
         <scene sceneID="4hi-Q8-wEt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mye-ol-sTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="DiV-v1-qg4" customClass="HistoryTableViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="O04-Ir-0JW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -404,6 +403,7 @@
                         <outlet property="tableview" destination="O04-Ir-0JW" id="Xo1-tq-R4z"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mye-ol-sTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.800000000000004" y="806.44677661169419"/>
         </scene>
