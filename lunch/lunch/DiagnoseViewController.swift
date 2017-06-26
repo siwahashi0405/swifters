@@ -79,37 +79,31 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             self.message.isHidden = true   // メッセージ非表示
             self.spinner.isHidden = false   // スピナー表示
             self.takePictureBtn.isHidden = true   // ボタン非表示
-            self.imageBase64 = Image2String(image: cameraView.image!)   // Base64に変換
+            self.imageBase64 = Image2String(image: self.cameraView.image!)   // Base64に変換
         }
         cameraPicker.dismiss(animated: true, completion: nil)
         
         // apiデータ取得
-        let apiUrl = "https://swiftershoge.herokuapp.com/index.php/face" +
-                     "?uuid=\(myUuid! as String)" +
-/*
-                     "&image_base64=\(imageBase64! as String)" +
-*/
-                     "&user_latitude=\(String(currentLat))" +
-                     "&user_longtude=\(String(currentLong))"
-        print("apiUrl:" + apiUrl)
-        let url = URL(string: apiUrl)
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                print("error")
-            } else {
-                if let content = data {
-                    do {
+        let apiUrl = "https://swiftershoge.herokuapp.com/index.php/face"
+        var request = URLRequest(url: URL(string: apiUrl)!)
+        request.httpMethod = "POST"
+        let postString = "uuid=\(myUuid! as String)&image_base64=\(imageBase64! as String)&user_latitude=\(String(currentLat))&user_longitude=\(String(currentLong))"
+        request.httpBody = postString.data(using: .utf8)
+
+        let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
+            DispatchQueue.main.async {
+                do {
+                    if (error == nil) {
                         // 取得成功
                         // JSON解析
-                        let apiData = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        let restaurant = apiData["restaurant"] as! [String:AnyObject]
-
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            // 1秒後（即時処理だとエラーが発生する為）に実行したい処理
-                            self.cameraView.isHidden = true   // 写真非表示
-                            self.message.isHidden = false   // メッセージ表示
-                            self.spinner.isHidden = true   // スピナー非表示
-                            self.takePictureBtn.isHidden = false   // ボタン表示
+                        let apiData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                        print(apiData)
+                        // 評価
+                        if apiData["result"] as! Int == 0 {
+                            //// 正常：レストラン取得
+                            print("正常：レストラン取得")
+                            self.resetCamera()
+                            let restaurant = apiData["restaurant"] as! [String:AnyObject]   // レストラン取得
 
                             // 値渡し
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -132,14 +126,66 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
                             detailViewController.currentLat = self.currentLat
                             detailViewController.currentLong = self.currentLong
                             self.present(detailViewController, animated: true, completion: nil)
+
+                        } else if apiData["result"] as! Int == 1 {
+                            //// 正常：顔の検出できず
+                            print("正常：顔の検出できず")
+                            self.resetCamera()
+                            /// アラート
+                            // アラートを作成
+                            let alert = UIAlertController(
+                                title: "LUNCHからあなたへ",
+                                message: "表情がうまく検出できませんでした。もう一度表情を撮影してください！",
+                                preferredStyle: .alert)
+                            // アラートにボタンをつける
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            // アラート表示
+                            self.present(alert, animated: true, completion: nil)
+                            
+                        } else if apiData["result"] as! Int == 2 {
+                            //// 正常：レストランなし
+                            print("正常：レストランなし")
+                            self.resetCamera()
+                            /// アラート
+                            // アラートを作成
+                            let alert = UIAlertController(
+                                title: "LUNCHからあなたへ",
+                                message: "近くにレストランがありませんでした。少し移動してからまた試してください！",
+                                preferredStyle: .alert)
+                            // アラートにボタンをつける
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            // アラート表示
+                            self.present(alert, animated: true, completion: nil)
+                            
+                        } else if apiData["result"] as! Int == 901 {
+                            //// 異常：パラメーター不足
+                            print("異常：パラメーター不足")
+                            self.resetCamera()
+                            /// アラート
+                            // アラートを作成
+                            let alert = UIAlertController(
+                                title: "LUNCHからあなたへ",
+                                message: "上手く通信できませんでした。もう一度表情を撮影してください！",
+                                preferredStyle: .alert)
+                            // アラートにボタンをつける
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            // アラート表示
+                            self.present(alert, animated: true, completion: nil)
                         }
-                    } catch {
+                        
+                    } else {
                         // 取得失敗
                         print("could not get api data")
+                        print(error!.localizedDescription)
                     }
+                    
+                    
+                } catch {
+                    // 取得失敗
+                    print("error occured")
                 }
             }
-        }
+        })
         task.resume()
     }
     
@@ -157,8 +203,7 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             
             //BASE64のStringに変換する
             let encodeString: String = data.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
-            
-            //            print(encodeString)
+
             return encodeString
             
         }
@@ -177,7 +222,18 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
         case .denied:
             print("ローケーションサービスの設定が「無効」になっています (ユーザーによって、明示的に拒否されています）")
             // 取得許可を求める
-            self.locationManager.requestWhenInUseAuthorization()
+            //self.locationManager.requestWhenInUseAuthorization()
+            /// アラート
+            // アラートを作成
+            let alert = UIAlertController(
+                title: "LUNCHからあなたへ",
+                message: "ローケーションサービスの設定が「無効」になっています。「設定」より「LUNCH」アプリへのロケーションサービスを許可してください。",
+                preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            // アラート表示
+            self.dismiss(animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             break
         case .restricted:
             print("このアプリケーションは位置情報サービスを使用できません(ユーザによって拒否されたわけではありません)")
@@ -208,9 +264,16 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
 
+    func resetCamera() {
+        self.cameraView.isHidden = true   // 写真非表示
+        self.message.isHidden = false   // メッセージ表示
+        self.spinner.isHidden = true   // スピナー非表示
+        self.takePictureBtn.isHidden = false   // ボタン表示
+    }
+
     /*
      // MARK: - Navigation
-     
+
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
      // Get the new view controller using segue.destinationViewController.

@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="32.800000000000004" y="38.23088455772114"/>
         </scene>
         <!--Diagnose View Controller-->
         <scene sceneID="7ia-9P-VMr">
@@ -72,7 +72,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77u-St-2zu">
-                                <rect key="frame" x="16" y="28" width="14" height="24"/>
+                                <rect key="frame" x="16" y="28" width="25" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="/images/back_arrow.png"/>
                                 <connections>
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZG-7D-7Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880.79999999999995" y="37.331334332833585"/>
+            <point key="canvasLocation" x="880.80000000000007" y="37.331334332833585"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="vBZ-dY-FJT">
@@ -153,7 +153,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHO-jZ-mpi">
-                                <rect key="frame" x="16" y="28" width="14" height="24"/>
+                                <rect key="frame" x="16" y="28" width="25" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="/images/back_arrow.png"/>
                                 <connections>
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjM-2M-O3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1712.8" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1712.8000000000002" y="36.431784107946029"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="Y2p-tr-zVx">
@@ -350,7 +350,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-RM-abw">
-                                    <rect key="frame" x="8" y="32" width="14" height="24"/>
+                                    <rect key="frame" x="8" y="32" width="25" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="/images/back_arrow.png"/>
                                     <connections>
@@ -405,7 +405,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="806.44677661169419"/>
+            <point key="canvasLocation" x="32.800000000000004" y="806.44677661169419"/>
         </scene>
     </scenes>
     <resources>
