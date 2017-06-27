@@ -266,7 +266,7 @@
 				TargetAttributes = {
 					37F046421EC176BC008E3F81 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6WG9Y24UL9;
+						DevelopmentTeam = 4FNL3MK856;
 						ProvisioningStyle = Automatic;
 					};
 					37F046561EC176BC008E3F81 = {
@@ -632,11 +632,11 @@
 			baseConfigurationReference = F6FE4E8EFC22D5310A49C1B4 /* Pods-lunch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6WG9Y24UL9;
+				DEVELOPMENT_TEAM = 4FNL3MK856;
 				INFOPLIST_FILE = lunch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sugahara-weddingpark.co.jp";
+				PRODUCT_BUNDLE_IDENTIFIER = "ecc-ecc-ecc-i.softbank.jp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -647,11 +647,11 @@
 			baseConfigurationReference = BF1B8C09B937CDC584BCECB7 /* Pods-lunch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6WG9Y24UL9;
+				DEVELOPMENT_TEAM = 4FNL3MK856;
 				INFOPLIST_FILE = lunch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sugahara-weddingpark.co.jp";
+				PRODUCT_BUNDLE_IDENTIFIER = "ecc-ecc-ecc-i.softbank.jp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
