@@ -20,7 +20,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         // UUID
         self.myUuid = UIDevice.current.identifierForVendor!.uuidString
         
-        let url = URL(string: "https://swiftershoge.herokuapp.com/index.php/history/1")
+        let url = URL(string: "https://swiftershoge.herokuapp.com/index.php/history/\(myUuid! as String)")
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil
             {
