@@ -111,7 +111,7 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
                             detailViewController.comment = apiData["comment"] as! String
                             detailViewController.restaurantName = restaurant["name"] as! String
                             if restaurant["pr"]!["pr_short"] is NSNull {
-                                detailViewController.pr = "swiftersオススメ！！！"
+                                detailViewController.pr = "LUNCH オススメ!!!"
                             } else {
                                 detailViewController.pr = restaurant["pr"]!["pr_short"] as! String
                             }
