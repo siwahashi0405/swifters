@@ -101,6 +101,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
+    @IBAction func back(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     /*
     // MARK: - Navigation
 
