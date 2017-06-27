@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -256,31 +256,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eXl-VE-FlV">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_history.png" translatesAutoresizingMaskIntoConstraints="NO" id="FF5-xH-AQP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heu-8V-Tpi">
+                                <rect key="frame" x="8" y="32" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="/images/back_arrow.png"/>
+                                <connections>
+                                    <action selector="back:" destination="ybi-em-Pxi" eventType="touchDown" id="ZIZ-Vq-F6J"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eXl-VE-FlV">
+                                <rect key="frame" x="0.0" y="67" width="375" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="yK6-vp-DPS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyViewCell" rowHeight="115" id="eva-3h-9PU" customClass="HistoryViewCell" customModule="lunch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="115"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyViewCell" rowHeight="133" id="eva-3h-9PU" customClass="HistoryViewCell" customModule="lunch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="29" width="375" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eva-3h-9PU" id="Znr-h4-2Cx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="132.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bW1-9u-TcE">
-                                                    <rect key="frame" x="8" y="2.5" width="110" height="110"/>
+                                                    <rect key="frame" x="8" y="11" width="110" height="110.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="OL2-LF-dee"/>
                                                         <constraint firstAttribute="height" constant="110" id="eCN-vn-wEH"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title!!! Title!!! Title!!! Title!!! Title!!! Title!!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-3e-pwg">
-                                                    <rect key="frame" x="126" y="37" width="241" height="41"/>
+                                                    <rect key="frame" x="126" y="46" width="241" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -305,25 +318,8 @@
                                     <outlet property="delegate" destination="ybi-em-Pxi" id="AGn-Vn-AWk"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_history.png" translatesAutoresizingMaskIntoConstraints="NO" id="FF5-xH-AQP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heu-8V-Tpi">
-                                <rect key="frame" x="8" y="32" width="25" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="/images/back_arrow.png"/>
-                                <connections>
-                                    <action selector="back:" destination="ybi-em-Pxi" eventType="touchDown" id="ZIZ-Vq-F6J"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="eXl-VE-FlV" secondAttribute="trailing" id="AAy-RV-00P"/>
-                            <constraint firstItem="wra-gE-H9w" firstAttribute="top" secondItem="eXl-VE-FlV" secondAttribute="bottom" id="v1G-4Y-SqA"/>
-                            <constraint firstItem="eXl-VE-FlV" firstAttribute="leading" secondItem="IKy-6B-IFk" secondAttribute="leading" id="z0e-xe-UVa"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableview" destination="eXl-VE-FlV" id="M39-te-xmy"/>
@@ -332,81 +328,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4O-3b-uqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-767.20000000000005" y="800.14992503748135"/>
-        </scene>
-        <!--History Table View Controller-->
-        <scene sceneID="4hi-Q8-wEt">
-            <objects>
-                <tableViewController id="DiV-v1-qg4" customClass="HistoryTableViewController" customModule="lunch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="O04-Ir-0JW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Tct-LI-laW">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_history.png" translatesAutoresizingMaskIntoConstraints="NO" id="EFf-xL-ngz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-RM-abw">
-                                    <rect key="frame" x="8" y="32" width="25" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="/images/back_arrow.png"/>
-                                    <connections>
-                                        <action selector="back:" destination="DiV-v1-qg4" eventType="touchDown" id="W3G-9O-KxT"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="108" id="dPa-JK-Qm6" customClass="HistoryCell">
-                                <rect key="frame" x="0.0" y="92" width="375" height="108"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dPa-JK-Qm6" id="Srz-Ln-PKo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-6O-QmY">
-                                            <rect key="frame" x="16" y="11" width="120" height="85"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="N2g-Vi-OnP"/>
-                                                <constraint firstAttribute="width" constant="120" id="NnH-fJ-IjL"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-cB-t7s">
-                                            <rect key="frame" x="144" y="43" width="215" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="E4J-cB-t7s" firstAttribute="centerY" secondItem="viQ-6O-QmY" secondAttribute="centerY" id="8i9-NP-d45"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="E4J-cB-t7s" secondAttribute="trailing" constant="8" id="Ypf-Zf-sD1"/>
-                                        <constraint firstItem="E4J-cB-t7s" firstAttribute="leading" secondItem="viQ-6O-QmY" secondAttribute="trailing" constant="8" id="ZuD-kR-X1V"/>
-                                        <constraint firstItem="viQ-6O-QmY" firstAttribute="leading" secondItem="Srz-Ln-PKo" secondAttribute="leadingMargin" constant="8" id="bw3-mW-0Gv"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="imgView" destination="viQ-6O-QmY" id="iUm-c3-su8"/>
-                                    <outlet property="title" destination="E4J-cB-t7s" id="6lk-XF-9hZ"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="DiV-v1-qg4" id="LAH-aX-4jv"/>
-                            <outlet property="delegate" destination="DiV-v1-qg4" id="1Sr-AM-qXM"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="tableview" destination="O04-Ir-0JW" id="Xo1-tq-R4z"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mye-ol-sTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="32.800000000000004" y="806.44677661169419"/>
         </scene>
     </scenes>
     <resources>
