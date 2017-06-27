@@ -79,7 +79,7 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
             self.message.isHidden = true   // メッセージ非表示
             self.spinner.isHidden = false   // スピナー表示
             self.takePictureBtn.isHidden = true   // ボタン非表示
-            self.imageBase64 = Image2String(image: self.cameraView.image!.ResizeÜIImage(width: 200, height: 100))   // Base64に変換
+            self.imageBase64 = Image2String(image: self.cameraView.image!.ResizeÜIImage(width: 300, height: 400))   // Base64に変換
         }
         cameraPicker.dismiss(animated: true, completion: nil)
         
@@ -283,39 +283,20 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
 }
 
 extension UIImage{
-    
-    
-    
     // Resizeするクラスメソッド.
-    
     func ResizeÜIImage(width : CGFloat, height : CGFloat)-> UIImage!{
-        
-        
-        
         // 指定された画像の大きさのコンテキストを用意.
         UIGraphicsBeginImageContext(CGSize(width: width, height: height))
-        
-        
-        
+
         // コンテキストに自身に設定された画像を描画する.
         self.draw(in: CGRect(x:0.0, y:0.0, width: width, height: height))
-        
-        
-        
+
         // コンテキストからUIImageを作る.
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        
-        
-        
+
         // コンテキストを閉じる.
         UIGraphicsEndImageContext()
-        
-        
-        
+
         return newImage
-        
     }
-    
-    
-    
 }
