@@ -117,7 +117,7 @@ class DiagnoseViewController: UIViewController, UIImagePickerControllerDelegate,
                             }
                             detailViewController.restaurantUrlMobile = URL(string: restaurant["url_mobile"] as! String)
                             if restaurant["image_url"]!["shop_image1"] is NSNull {
-                                detailViewController.restaurantImageUrl = URL(string: "http://is2.mzstatic.com/image/thumb/Purple111/v4/e8/a4/35/e8a4357f-465e-8099-b8f7-e31695411c73/source/1200x630bb.jpg")
+                                detailViewController.restaurantImageUrl = URL(string: "https://swiftershoge.herokuapp.com/htdocs/img/destination.png")
                             } else {
                                 detailViewController.restaurantImageUrl = URL(string: restaurant["image_url"]!["shop_image1"] as! String)
                             }

@@ -74,7 +74,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyViewCell", for: indexPath) as! HistoryViewCell
         
         if (self.histories?[indexPath.item].imageUrl?.isEmpty)! {
-            self.histories?[indexPath.item].imageUrl = "http://is2.mzstatic.com/image/thumb/Purple111/v4/e8/a4/35/e8a4357f-465e-8099-b8f7-e31695411c73/source/1200x630bb.jpg"
+            self.histories?[indexPath.item].imageUrl = "https://swiftershoge.herokuapp.com/htdocs/img/destination.png"
         }
         
         cell.title.text = self.histories?[indexPath.item].title
