@@ -8,21 +8,34 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-lunchTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-lunchUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>SwiftGifOrigin.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>SwiftVideoBackground.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -37,12 +50,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>22D818533D1E58875E2836C03EE22C1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>412D76A204971D631E411E61E4BFEFC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>63B95D85124F24ECDF9B5E5DFB89E1D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BD54EDBD49078A2B81F1E9452F50142A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB9BDAA5ECC8F02D5C3C1A6502AF009A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

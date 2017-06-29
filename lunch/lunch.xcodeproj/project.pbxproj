@@ -271,6 +271,7 @@
 					};
 					37F046561EC176BC008E3F81 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 48YNX3M893;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 37F046421EC176BC008E3F81;
 					};
@@ -663,6 +664,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 48YNX3M893;
 				INFOPLIST_FILE = lunchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iwasou.lunchTests;
@@ -678,6 +680,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 48YNX3M893;
 				INFOPLIST_FILE = lunchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iwasou.lunchTests;
