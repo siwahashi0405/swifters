@@ -24,8 +24,13 @@ class TopViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        // 表示できる限界(bound)のサイズ
+        let BoundSize_w: CGFloat = UIScreen.main.bounds.width //横幅
+        let BoundSize_h: CGFloat = UIScreen.main.bounds.height //縦幅
+        
         let i = arc4random_uniform(7) + 1   // 1〜7で乱数を発生
-        backgroundVideoView = BackgroundVideo(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
+        backgroundVideoView = BackgroundVideo(frame: CGRect(x: 0, y: 0, width: BoundSize_w, height: BoundSize_h))
         backgroundVideoView.createBackgroundVideo(name: "movies/Background_" + String(i), type: "mp4", alpha: 0.3)
 
         backgroundVideoView.addSubview(titleView)
