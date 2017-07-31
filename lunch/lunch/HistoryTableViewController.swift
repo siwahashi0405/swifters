@@ -20,10 +20,8 @@ class HistoryTableViewController: UITableViewController{
         super.viewDidLoad()
         // UUID
         self.myUuid = UIDevice.current.identifierForVendor!.uuidString
-        print(self.myUuid)
 
         let url = URL(string: "https://swiftershoge.herokuapp.com/index.php/history/\(myUuid! as String)")
-        print(url)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil
             {
@@ -84,7 +82,6 @@ class HistoryTableViewController: UITableViewController{
      */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(self.histories?.count)
         return self.histories?.count ?? 0
     }
     
@@ -107,7 +104,7 @@ class HistoryTableViewController: UITableViewController{
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
         //self.dismiss(animated: true, completion: nil)   // 戻る
-        var UrlRequest = self.histories?[indexPath.item].url
+        let UrlRequest = self.histories?[indexPath.item].url
         if let url = URL(string: UrlRequest!), UIApplication.shared.canOpenURL(url){
             UIApplication.shared.open(url, options: [:])
         }

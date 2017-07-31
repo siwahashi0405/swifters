@@ -8,6 +8,10 @@ target 'lunch' do
   # Pods for lunch
   pod 'SwiftGifOrigin', '~> 1.5'
   pod 'SwiftVideoBackground'
+  
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'lunchTests' do
     inherit! :search_paths
