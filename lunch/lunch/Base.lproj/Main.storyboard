@@ -139,21 +139,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBT-LK-p1n">
-                                <rect key="frame" x="133" y="132" width="135" height="90"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/bar_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-ZK-wz1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Alert"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLO-3p-zMx">
+                                <rect key="frame" x="47" y="96" width="279" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">今日のランチはどちらですか？？
+いきたい方だけ選んでください</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dz-LY-dEW">
+                                <rect key="frame" x="234" y="267" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="外食"/>
+                                <connections>
+                                    <segue destination="KJU-hO-G7m" kind="presentation" identifier="listViewController" id="0NA-Wm-iIa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohA-w2-v59">
+                                <rect key="frame" x="73" y="267" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="パティオ"/>
+                                <connections>
+                                    <segue destination="KJU-hO-G7m" kind="presentation" identifier="listViewController" id="Bbn-mg-FJX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="alertbtn" destination="RBT-LK-p1n" id="3Co-mS-dAK"/>
+                        <outlet property="outbtn" destination="9Dz-LY-dEW" id="KgX-A9-3J5"/>
+                        <outlet property="ptbtn" destination="ohA-w2-v59" id="6QQ-VG-gSX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itI-TM-JMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="344.80000000000001" y="778.56071964017997"/>
+            <point key="canvasLocation" x="344.80000000000001" y="786.65667166416802"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="A3u-aH-6M7">
@@ -392,4 +417,7 @@
         <image name="/images/icon.png" width="16" height="16"/>
         <image name="/images/logo.png" width="640" height="171"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bbn-mg-FJX"/>
+    </inferredMetricsTieBreakers>
 </document>

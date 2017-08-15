@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class ListViewController: UIViewController {
+    
+    var tag: Int!
+    var lunchTypes: [Int: String] = [0: "indoor", 1: "outdoor"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.tag)
+        // tag: 0:indoor 1:outdoor
+        //print(self.lunchTypes[self.tag!]!)
         
     }
 
