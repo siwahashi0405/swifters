@@ -12,7 +12,7 @@ import Firebase
 class SelectionViewController: UIViewController {
     
     var myUuid: String!
-    var tag: Int!
+    var lunchTypes: [Int: String] = [0: "indoor", 1: "outdoor"]
     
     @IBOutlet weak var ptbtn: UIButton!
     @IBOutlet weak var outbtn: UIButton!
@@ -29,16 +29,13 @@ class SelectionViewController: UIViewController {
     }
     
     func showTextInputAlert() {
-        let storyboard: UIStoryboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "listView")
         let ref = Database.database().reference() //FirebaseDatabaseのルートを指定
         // uuidがすでに登録されていた場合
         ref.child(self.myUuid).observeSingleEvent(of: .value, with: { (snapshot) in
-            //let value = snapshot.value as? NSDictionary
-            //print(value?["user"])
-            // 現在画面へ遷移
-            self.navigationController?.popViewController(animated: true)
-            }) { (error) in
+            if snapshot.hasChild("user"){
+                // 現在画面へ遷移
+                self.navigationController?.popViewController(animated: true)
+            }else{
                 // テキストフィールド付きアラート表示
                 let alert = UIAlertController(title: "ニックネーム", message: "あなたのニックネームを入力してください。", preferredStyle: .alert)
                 
@@ -54,8 +51,8 @@ class SelectionViewController: UIViewController {
                             ref.child(self.myUuid! as String).setValue(["user": textField.text!, "date": ServerValue.timestamp()])
                         }
                     }
-                    // 一覧画面へ遷移
-                    self.present(nextView, animated: true, completion: nil)
+                    // 現在画面へ遷移
+                    self.navigationController?.popViewController(animated: true)
                 })
                 alert.addAction(okAction)
                 
@@ -78,17 +75,33 @@ class SelectionViewController: UIViewController {
                 
                 // アラートを画面に表示
                 self.present(alert, animated: true, completion: nil)
+            }
+        }) { (error) in
+                print("error")
         }
     }
     
     func senderList(sender:UIButton) {
-        self.performSegue(withIdentifier: "listViewController", sender: self.tag)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "listViewController" {
-            let listViewController = segue.destination as! ListViewController
-            listViewController.tag = sender as? Int
+        // 現在日付
+        let fmt = DateFormatter()
+        let now = Date()
+        fmt.dateFormat = "yyyy-MM-dd"
+        let date = fmt.string(from: now)
+        let ref = Database.database().reference()
+        // firebaseにユーザのランチ選択情報のデータを入れる
+        ref.child(self.myUuid).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            ref.child(date).child(self.lunchTypes[sender.tag]!).child("test").setValue(value?["user"])
+        
+
+        let storyboard: UIStoryboard = self.storyboard!
+        let listView = storyboard.instantiateViewController(withIdentifier: "listView") as! ListViewController
+            listView.tag = sender.tag
+  
+        // 一覧画面へ遷移
+        self.present(listView, animated: true, completion: nil)
+            }) { (error) in
+            print("エラー")
         }
     }
     

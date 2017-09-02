@@ -156,17 +156,11 @@
                                 <rect key="frame" x="234" y="267" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="外食"/>
-                                <connections>
-                                    <segue destination="KJU-hO-G7m" kind="presentation" identifier="listViewController" id="0NA-Wm-iIa"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohA-w2-v59">
                                 <rect key="frame" x="73" y="267" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="パティオ"/>
-                                <connections>
-                                    <segue destination="KJU-hO-G7m" kind="presentation" identifier="listViewController" id="Bbn-mg-FJX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,7 +411,4 @@
         <image name="/images/icon.png" width="16" height="16"/>
         <image name="/images/logo.png" width="640" height="171"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Bbn-mg-FJX"/>
-    </inferredMetricsTieBreakers>
 </document>
