@@ -9,20 +9,19 @@
 import UIKit
 import Firebase
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var myUuid: String!
     var tag: Int!
     var lunchTypes: [Int: String] = [0: "indoor", 1: "outdoor"]
+    var lists = [List]()
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myUuid = UIDevice.current.identifierForVendor!.uuidString
-        // tag: 0:indoor 1:outdoor
-        // save
-        print(self.tag)
         getUserLunchInfo()
-        
     }
     
     func getUserLunchInfo() {
@@ -32,26 +31,51 @@ class ListViewController: UIViewController {
         fmt.dateFormat = "yyyy-MM-dd"
         let date = fmt.string(from: now)
         let ref = Database.database().reference()
-        self.tag = 0
         ref.child(date).child(self.lunchTypes[self.tag]!).observeSingleEvent(of: .value, with: { (snapshot) in
-            let values = snapshot.value as? NSDictionary
+            if let values = snapshot.value as? Dictionary<String, AnyObject>{
+                self.lists = []
+                for (_,value) in values {
+                    let list = List()
+                    list.nickname = value as? String
+                    self.lists.append(list)
+                }
 
-            for (key,value) in values! {
-                print("uuid: \(key), value: \(value)")
+                DispatchQueue.main.async(execute: {
+                    self.tableView.reloadData()
+                })
             }
-        
-            
-
         }) { (error) in
             print("エラー")
         }
 
     }
     
-    // ランチをキーにして当日日付valueがなければ作成する
-    // 日付を作成と同時にlunchtype(2種類作成する)
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     
-    // 今回選んだタイプのキーが一致すればその場所にユーザーID入れる
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.lists.count 
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listViewCell", for: indexPath) as! ListViewCell
+        cell.textLabel!.text = self.lists[indexPath.row].nickname
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

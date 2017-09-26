@@ -91,7 +91,15 @@ class SelectionViewController: UIViewController {
         // firebaseにユーザのランチ選択情報のデータを入れる
         ref.child(self.myUuid).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            ref.child(date).child(self.lunchTypes[sender.tag]!).child("test").setValue(value?["user"])
+
+            ref.child(date).child(self.lunchTypes[sender.tag]!).child(self.myUuid! as String).setValue(value?["user"])
+            
+            // パティオか外食かどちらかにしかデータが入らないようにする。
+            if sender.tag == 1 {
+                ref.child(date).child(self.lunchTypes[0]!).child(self.myUuid! as String).removeValue()
+            } else {
+                ref.child(date).child(self.lunchTypes[1]!).child(self.myUuid! as String).removeValue()
+            }
         
 
         let storyboard: UIStoryboard = self.storyboard!
