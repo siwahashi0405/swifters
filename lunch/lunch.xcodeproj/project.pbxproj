@@ -13,7 +13,6 @@
 		37A0F2DD1EEE63A00034A915 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 37A0F2DC1EEE63A00034A915 /* images */; };
 		37F046471EC176BC008E3F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F046461EC176BC008E3F81 /* AppDelegate.swift */; };
 		37F046491EC176BC008E3F81 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F046481EC176BC008E3F81 /* TopViewController.swift */; };
-		37F0464C1EC176BC008E3F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F0464A1EC176BC008E3F81 /* Main.storyboard */; };
 		37F0464E1EC176BC008E3F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37F0464D1EC176BC008E3F81 /* Assets.xcassets */; };
 		37F046511EC176BC008E3F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F0464F1EC176BC008E3F81 /* LaunchScreen.storyboard */; };
 		37F0465C1EC176BC008E3F81 /* lunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0465B1EC176BC008E3F81 /* lunchTests.swift */; };
@@ -28,6 +27,9 @@
 		F5521A5A1F5BA9D300A9282C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5521A591F5BA9D300A9282C /* List.swift */; };
 		F557D76F1F4BC8A3006B52E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F557D76E1F4BC8A3006B52E3 /* GoogleService-Info.plist */; };
 		F5796F7A1F24BC50002D4F9A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5796F791F24BC50002D4F9A /* ListViewController.swift */; };
+		F5D13FC81F7A7F97002BCCC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F0464A1EC176BC008E3F81 /* Main.storyboard */; };
+		F5D13FC91F7A7F98002BCCC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F0464A1EC176BC008E3F81 /* Main.storyboard */; };
+		F5D13FCA1F7A7F99002BCCC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F0464A1EC176BC008E3F81 /* Main.storyboard */; };
 		F5E2F4801EFFF0F300FD3DFB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E2F47F1EFFF0F300FD3DFB /* HistoryViewController.swift */; };
 		F5E2F4821EFFF45600FD3DFB /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E2F4811EFFF45600FD3DFB /* HistoryViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -326,8 +328,8 @@
 				B348D5011EF2C804003427F7 /* movies in Resources */,
 				37A0F2DD1EEE63A00034A915 /* images in Resources */,
 				37F046511EC176BC008E3F81 /* LaunchScreen.storyboard in Resources */,
+				F5D13FCA1F7A7F99002BCCC0 /* Main.storyboard in Resources */,
 				37F0464E1EC176BC008E3F81 /* Assets.xcassets in Resources */,
-				37F0464C1EC176BC008E3F81 /* Main.storyboard in Resources */,
 				F557D76F1F4BC8A3006B52E3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D13FC81F7A7F97002BCCC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D13FC91F7A7F98002BCCC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,7 +661,7 @@
 				INFOPLIST_FILE = lunch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.softbank.i.ecc-ecc-ecc.lunch";
+				PRODUCT_BUNDLE_IDENTIFIER = "sugahara-weddingpark.co.jp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -672,7 +676,7 @@
 				INFOPLIST_FILE = lunch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.softbank.i.ecc-ecc-ecc.lunch";
+				PRODUCT_BUNDLE_IDENTIFIER = "sugahara-weddingpark.co.jp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -18,6 +18,8 @@ class TopViewController: UIViewController {
     @IBOutlet var diagnoseBtn: UIButton!
 
     @IBOutlet var historyBtn: UIButton!
+    
+    @IBOutlet var goLunchBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class TopViewController: UIViewController {
         backgroundVideoView.addSubview(titleView)
         backgroundVideoView.addSubview(diagnoseBtn)
         backgroundVideoView.addSubview(historyBtn)
+        backgroundVideoView.addSubview(goLunchBtn)
 
         self.view.addSubview(backgroundVideoView)
     }

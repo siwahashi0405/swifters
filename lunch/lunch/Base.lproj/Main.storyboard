@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eEj-83-dck">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arb-gS-cKe">
-                                <rect key="frame" x="57" y="544" width="260" height="48"/>
+                                <rect key="frame" x="57" y="527" width="260" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_camera.png"/>
                                 <connections>
@@ -35,11 +35,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-tr-oWr">
-                                <rect key="frame" x="57" y="599" width="260" height="48"/>
+                                <rect key="frame" x="57" y="583" width="260" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="/images/btn_history.png"/>
                                 <connections>
                                     <segue destination="ybi-em-Pxi" kind="presentation" id="DGW-34-UYy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdd-y1-ndp" userLabel="Lunch Btn">
+                                <rect key="frame" x="57" y="286" width="260" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="/images/who.png"/>
+                                <connections>
+                                    <segue destination="eEj-83-dck" kind="presentation" id="EqP-oC-n0R"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,6 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="diagnoseBtn" destination="arb-gS-cKe" id="dTG-qK-EUV"/>
+                        <outlet property="goLunchBtn" destination="pdd-y1-ndp" id="OWj-ad-JF5"/>
                         <outlet property="historyBtn" destination="1QF-tr-oWr" id="jfH-Jv-sDc"/>
                         <outlet property="titleView" destination="F3d-bR-mWQ" id="TBL-KR-mCB"/>
                     </connections>
@@ -155,20 +164,20 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dz-LY-dEW">
                                 <rect key="frame" x="200" y="240" width="147" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="外食" image="outdoor_btn.png"/>
+                                <state key="normal" title="外食" image="/images/outdoor_btn.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iG-oe-cCc">
                                 <rect key="frame" x="16" y="20" width="25" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="/images/back_arrow.png"/>
                                 <connections>
-                                    <action selector="back:" destination="F44-GI-GRu" eventType="touchDown" id="GCs-ED-YFa"/>
+                                    <action selector="back:" destination="eEj-83-dck" eventType="touchUpInside" id="jHt-am-FjM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohA-w2-v59">
-                                <rect key="frame" x="22" y="240" width="147" height="147"/>
+                                <rect key="frame" x="26" y="237" width="149" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="パティオ" image="patio_btn.png"/>
+                                <state key="normal" title="パティオ" image="/images/patio_btn.png"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,8 +203,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outdoor_bnr.png" translatesAutoresizingMaskIntoConstraints="NO" id="HOg-2k-QJl">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/outdoor_bnr.png" translatesAutoresizingMaskIntoConstraints="NO" id="HOg-2k-QJl">
                                 <rect key="frame" x="0.0" y="-2" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="/images/patio_bnr.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-h1-T3D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vSC-sW-wA2">
@@ -229,6 +242,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="outdoorBtn" destination="HOg-2k-QJl" id="YCZ-6Z-WKf"/>
+                        <outlet property="patioBtn" destination="Qzv-h1-T3D" id="tm6-Lz-8m5"/>
                         <outlet property="tableView" destination="vSC-sW-wA2" id="DQ6-ee-hxZ"/>
                     </connections>
                 </viewController>
@@ -448,8 +463,10 @@
         <image name="/images/frame.png" width="16" height="16"/>
         <image name="/images/icon.png" width="16" height="16"/>
         <image name="/images/logo.png" width="640" height="171"/>
-        <image name="outdoor_bnr.png" width="750" height="128"/>
-        <image name="outdoor_btn.png" width="290" height="280"/>
-        <image name="patio_btn.png" width="290" height="280"/>
+        <image name="/images/outdoor_bnr.png" width="16" height="16"/>
+        <image name="/images/outdoor_btn.png" width="16" height="16"/>
+        <image name="/images/patio_bnr.png" width="16" height="16"/>
+        <image name="/images/patio_btn.png" width="16" height="16"/>
+        <image name="/images/who.png" width="16" height="16"/>
     </resources>
 </document>

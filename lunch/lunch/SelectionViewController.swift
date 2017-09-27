@@ -17,6 +17,7 @@ class SelectionViewController: UIViewController {
     @IBOutlet weak var ptbtn: UIButton!
     @IBOutlet weak var outbtn: UIButton!
 
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.myUuid = UIDevice.current.identifierForVendor!.uuidString
@@ -112,6 +113,12 @@ class SelectionViewController: UIViewController {
             print("エラー")
         }
     }
+    
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    
     
 
     /*

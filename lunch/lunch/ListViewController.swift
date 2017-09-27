@@ -16,11 +16,21 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     var lunchTypes: [Int: String] = [0: "indoor", 1: "outdoor"]
     var lists = [List]()
     
+    @IBOutlet weak var outdoorBtn: UIImageView!
+    @IBOutlet weak var patioBtn: UIImageView!
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myUuid = UIDevice.current.identifierForVendor!.uuidString
+        if self.tag == 1 {
+            patioBtn.isHidden = true
+            outdoorBtn.isHidden = false
+        } else {
+            patioBtn.isHidden = false
+            outdoorBtn.isHidden = true
+        }
+        
         getUserLunchInfo()
     }
     
